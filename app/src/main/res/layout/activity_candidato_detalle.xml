@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvCandidatoDetalle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    app:cardCornerRadius="40dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" android:padding="6dp">
+            <ImageView
+                android:id="@+id/imvDocumento"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity= "center"
+                android:layout_marginStart="10dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                app:srcCompat="@drawable/person_azul_login"
+                android:layout_alignParentLeft="true"/>
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/imvDocumento"
+                android:orientation="vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/imvDocumento">
+                <TextView
+                    android:id="@+id/txtvEvidencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="Rafael Lemus Ramos"
+                    android:textColor="@color/acvblue"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/txtvSubCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="25/08/2023"
+                    android:textStyle="italic"
+                    android:textColor="@color/acvblack"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/txtvDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Surtidor"
+                    android:textColor="@color/acvblack"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txtvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="Etapa 1"
+                android:textColor="@color/acvorange"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,25 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    package="com.abarrotescasavargas.operamovil">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Opera Movil"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.OperaMovil"
-        tools:targetApi="31">
+        android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".MainActivity"
+            android:name=".Main.Mantenimiento.Captura_Evidencia"
+            android:exported="false" />
+        <activity
+            android:name=".Main.ActivityEvidencia"
+            android:exported="false" />
+        <activity
+            android:name=".Main.SincronizandoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Main.Documentos.CapturaDocumento"
+            android:exported="false" />
+        <activity
+            android:name=".Main.Documentos.ActivityDocumentos"
+            android:exported="false" />
+        <activity
+            android:name=".Main.Candidatos.ActivityCandidatos"
+            android:exported="false" />
+        <activity
+            android:name=".Main.activity_menu_2"
+            android:exported="false" />
+        <activity
+            android:name=".Main.Mantenimiento.ActivityMantenimiento"
+            android:exported="false" />
+        <activity
+            android:name=".Main.listaBitacora"
+            android:exported="false" />
+
+        <activity
+            android:name=".Main.NuevoArticulo"
+            android:exported="false" />
+        <activity
+            android:name=".Main.Rezagados.CapturaRezagado"
+            android:label="Rezagados"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Main.ArticuloNuevo.CapturaArticuloNuevo"
+            android:label="Articulo Nuevo"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Main.ConcursoVentas.CapturaConcursoVentas"
+            android:label="Articulo Nuevo"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name=".Main.ArticuloNoExiste" />
+        <activity android:name=".Main.ArticuloExiste" />
+        <activity android:name=".Main.VerificadorProductos" />
+        <activity android:name=".Main.concursoVentas" />
+        <activity android:name=".Main.Rezagado" />
+
+        <activity
+            android:name=".Main.Login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.abarrotescasavargas.operamovil.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
     </application>
 
 </manifest>
