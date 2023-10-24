@@ -8,10 +8,10 @@ android {
 
     defaultConfig {
         applicationId "com.abarrotescasavargas.operamovil"
-        minSdk 23
+        minSdk 26
         targetSdk 34
         versionCode 1
-        versionName "1.0"
+        versionName "4.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -25,18 +25,64 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "peraMovil.4.1.0.apk"
+        }
+    }
 }
 
 dependencies {
+    //--------------------------------------------------------------------------
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
 
+    implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.10.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    //implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.7.4'
+    implementation 'androidx.navigation:navigation-ui:2.7.4'
+    implementation files('libs/jtds-1.3.1.jar')
+    implementation files('libs/mysql-connector-java-5.1.10-bin.jar')
+    implementation 'androidx.window:window:1.2.0-beta04'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.core:core:1.12.0'
     testImplementation 'junit:junit:4.13.2'
-   // testImplementation 'junit:junit:4.12'
-    //androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    //androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    //androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation 'com.google.zxing:core:3.4.1'
+    implementation 'com.google.android.material:material:1.10.0'
+
+    //implementation 'org.apache.commons:commons-collections4:4.4'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'id.zelory:compressor:3.0.1'
+
+
+
+    // libreria para leer el QR Rafa 15 marzo
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+
+    // Retrofit Rafa 22/Marzo 2023
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.google.code.gson:gson:2.9.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+
+    // para el formulario Rafa 26 Abril 2023
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+    // para Prelaader 11 de Mayo 2023  , se supone se usará lottie con mejores estilos
+    implementation "com.airbnb.android:lottie:5.2.0"
+    // librería glide para traer imagenes desde una URL
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    androidTestImplementation "androidx.test.ext:junit:1.1.5"
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+
+
+
+
+
 }

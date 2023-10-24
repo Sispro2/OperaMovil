@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/idDato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="mensaje"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+
+    <TextView
+        android:id="@+id/idnombre"
+        android:layout_width="210dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="96dp"
+        android:text="nombre"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+
+    <TextView
+        android:id="@+id/idUltimaVenta"
+        android:layout_width="86dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="30dp"
+        android:text="ultimaVenta"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/idnombre"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+
+    <TextView
+        android:id="@+id/idDiasRezagado"
+        android:layout_width="97dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="28dp"
+        android:text="DiasRezagado"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/idUltimaVenta"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+
+    <TextView
+        android:id="@+id/idExistencias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:text="Existenias"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/idDiasRezagado"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow"
+        tools:ignore="UnknownIdInLayout" />
+
+    <TextView
+        android:id="@+id/idfechas"
+        android:layout_width="160dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="40dp"
+        android:text="Fecha Evidencia"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/idExistencias"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

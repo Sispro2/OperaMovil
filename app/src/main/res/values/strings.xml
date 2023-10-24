@@ -1,3 +1,114 @@
 <resources>
-    <string name="app_name">OperaMovil</string>
+    <string name="app_name">Opera Móvil</string>
+    <string name="app_version">ver 4.1.0</string>
+    <string name="mnuEnviar">Enviar</string>
+    <string name="mnuBorrar">Borrar</string>
+    <string name="mnuRuta">Ruta</string>
+    <string name="mnuSalir">Salir</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_login">Lista de Verificación</string>
+
+
+    <string name="prompt_email">Usuario de Sinfonía</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="lg_mensaje">Introduzca Usuario y Contraseña</string>
+    <string name="btn_login">Ingresar</string>
+    <string name="activar_permisos">ACTIVA todos los permisos para el uso de la aplicación, cierra y ábrela de nuevo.</string>
+    <string name="title_activity_menu_aplicacion">menuAplicacion</string>
+    <string name="title_activity_lista_bitacoras">listaBitacoras</string>
+    <string name="no_codigo_qr">No reconoce el código QR</string>
+    <string name="no_leer_informacion">No se puede leer la información</string>
+
+    <!-- Aquí van las String de spinners  Rafael Lemus  19 Junio 2023 -->
+    <string name="Sp_elija_sucursal">- ELIJA -</string>
+    <!-- mensajes para el Progress Dialog Rafael Lemus 19  Junio 2023-->
+    <string name="Pd_validando">Validando</string>
+    <string name="Pd_enviando">Enviando</string>
+    <string name="Pd_sincronizando">Sincronizando</string>
+    <string name="Pd_conectando">Conectando</string>
+    <string name="Cn_error_local">No se puede contectar con: %1$s</string>
+    <string name="Cn_activar_wifi">Encienda el Wifi</string>
+    <string name="Cn_validaPassword">Verifique la constraseña</string>
+
+    <!-- Aquí van las String del menu principal  Rafael Lemus  20 Junio 2023 -->
+    <string name="mn_proveedores">PROVEEDORES</string>
+    <string name="mn_reclutamiento">RECLUTAMIENTO</string>
+    <string name="mn_lento">LENTO \nDESPLAZAMIENTO</string>
+    <string name="mn_concurso">CONCURSO DE\n VENTAS</string>
+    <string name="mn_recepcion">RECEPCION/COMPRAS</string>
+    <string name="mn_verificador">VERIFICADOR</string>
+    <string name="mn_articulo">ARTÍCULO NUEVO</string>
+    <string name="mn_mantenimiento">MANTENIMIENTO</string>
+    <string name="mn_transferencias">TRANSFERENCIAS</string>
+    <string name="TD_sucursal_destino">Destino: %1$S</string>
+    <string name="TD_sucursal_origen">Origen: %1$S</string>
+    <string name="TD_folio">FOLIO: %1$S</string>
+    <string name="TD_status">Pre-entrada</string>
+
+    <!-- Aquí van las String de las Transferencias  Rafael Lemus  23 Junio 2023 -->
+
+    <string name="tr_elija">Elija un folio y proceda a contar los artículos</string>
+    <!-- Aquí van las String de los detalles de las  Transferencias  Rafael Lemus  24 Junio 2023 -->
+    <string name="T_folio_transferencia">Folio: %1$S</string>
+    <string name="T_sucursal_origen">Origen: %1$S</string>
+    <string name="T_total_articulos">Total de Artículos: %1$d</string>
+    <string name="T_finalizar">Finalizar</string>
+    <string name="T_observaciones">%1$S</string>
+    <string name="T_contados">Contados: %1$S</string>
+
+
+    <string name="DT_clave">Clave: %1$S</string>
+    <string name="DT_cantidad">Se Reciben: %1$S %2$S</string>
+    <string name="DT_cantidadenviada">Enviada: %1$S %2$S</string>
+    <string name="DT_descripcion">%1$S</string>
+    <string name="DT_validada">Validada</string>
+
+
+    <!-- Aquí van las String de Cantidad Dialog  Rafael Lemus  28 Junio 2023 -->
+    <string name="cd_desc_super">%1$S</string>
+    <string name="cd_unidad">  %1$S</string>
+    <string name="cd_cantidad">Cantidad Recibida</string>
+    <string name="cd_guardar">Guardar</string>
+
+    <!-- Aquí van las String para mensajes  Rafael Lemus  29 Junio 2023 -->
+    <string name="msj_sindatos">Sin Datos</string>
+    <string name="msj_sinconexiones">Sin Conexiones de Red Disponibles</string>
+    <string name="msj_servidor_local_no_responde">El Servidor: %1$S no responde, Avise a Sistemas</string>
+
+
+    <!-- Mensajes para la pantalla de ActivityCandidatos de Reclutamiento 26 Agosto 2023-->
+    <string name="cd_elija">Elija un Candidato y Capture los documentos</string>
+    <string name="cp_encabezado">Toca el icono de la cámara</string>
+    <string name="cp_otrafoto">Para corregir solo toca la imagen</string>
+    <string name="dc_nombre">%1$S</string>
+    <string name="dc_puesto">%1$S</string>
+    <string name="dc_texto_p">Lista de Documentos</string>
+    <string name="title_activity_candidatos">Candidatos</string>
+
+    <string-array name="spinnerRezagados">
+        <item>Todos</item>
+        <item>Mayor existencia</item>
+        <item>Menor existencia</item>
+        <item>Con evidencia</item>
+        <item>Sin evidencia</item>
+    </string-array>
+
+
+    <!-- Mensajes para la pantalla de los reportes de mantenimiento 15 Septiembre 2023  Rafael Lemus-->
+    <string name="title_activity_rep_mantto">Reportes de Mantenimiento</string>
+    <string name="mt_categoria">%1$S</string>
+    <string name="mt_subcategoria">%1$S</string>
+    <string name="mt_descripcion">%1$S</string>
+    <string name="mt_status">%1$S</string>
+    <!-- Evidencia de reporte de mantenimiento-->
+    <string name="title_activity_evd_mantto">Evidencia de Reporte</string>
+    <string name="ev_mt_status_evidencia">%1$S</string>
+    <string name="ev_mt_nombre_evidencia">%1$S</string>
 </resources>
