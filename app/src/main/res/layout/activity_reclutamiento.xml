@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.Reclutamiento">
+
+    <TextView
+        android:id="@+id/idSucNomRe"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="38dp"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095"
+        tools:ignore="UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="125dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/marco"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editObservaciones" />
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Documentación de Candidatos"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/cmbCandidatos"
+        android:layout_width="376dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ScrollView
+        android:id="@+id/scrollFotos"
+        android:layout_width="397dp"
+        android:layout_height="446dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cmbCandidatos">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:textStyle="bold">
+
+            <TextView
+                android:id="@+id/textView222"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="ROSTRO DEL CANDIDATO"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/rostro"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btnRostro"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/camarafotos"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="SOLICITUD DE EMPLEO"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/solicitud"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btnSolicitudEmpleo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/camarafotos"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="ACTA DE NACIMIENTO"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/acta"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btnacta"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/camarafotos"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/CURP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CURP"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/curp"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btncurp"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/compro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="RFC"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgRFC"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btnRFC"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/rfcs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="COMPROBANTE DEL IMSS"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgIMSS"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btnIMSS"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/electors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CREDENCIAL DE ELECTOR"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgelector"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btnelector"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/domicilios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="COMPROBANTE DE DOMICILIO"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/domicilio"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btndomicilio"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+
+            <TextView
+                android:id="@+id/estudioss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="COMPROBANTE DE ESTUDIOS"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/estudios"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btnestudios"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+
+            <TextView
+                android:id="@+id/constancias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2 CONSTANCIAS LABORALES"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/laborales"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btnLaboral"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+
+            <TextView
+                android:id="@+id/fotografia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="FOTOGRAFIAS"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/fotografias"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btnfotografias"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+
+            <TextView
+                android:id="@+id/infonavitt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="AVISO DE RETENCION DE INFONAVIT"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/infonavit"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btninfonavit"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/cartaTex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CARTA RENUNCIA"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgcarta"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btncarta"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/soliDatosTex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="SOLICITUD DE DATOS"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgsolicitud"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+            <Button
+                android:id="@+id/btnSolicitud"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/huellasTex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="REGISTRO DE HUELLAS"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgHuella"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+
+            <Button
+                android:id="@+id/btnHuellas"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/poliNominasTex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="POLITICAS PARA PAGO DE NOMINA"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgPoliticas"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+
+            <Button
+                android:id="@+id/btnPoliticas"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/requisitosTex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="REQUISITOS DE CONTRATACION"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgRequisito"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+
+            <Button
+                android:id="@+id/btnRequisitos"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+
+            <TextView
+                android:id="@+id/fianzaTex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="FIANZA DE FIDELIDAD"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgFianza"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+
+            <Button
+                android:id="@+id/btnFianza"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+            <TextView
+                android:id="@+id/telefonosTex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="RESP. CELULAR"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgCelulares"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+
+            <Button
+                android:id="@+id/btnCelulares"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+
+            <TextView
+                android:id="@+id/reciboTex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="AUTORIZACION RECIBO ELECTRONICO"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgelectronicos"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+
+            <Button
+                android:id="@+id/btnelectronicos"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+
+            <TextView
+                android:id="@+id/privacidadTex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="AVISO DE PRIVACIDAD"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgAviso"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+
+            <Button
+                android:id="@+id/btnAviso"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+
+            <TextView
+                android:id="@+id/vestimentaTex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CODIGO DE VESTIMENTA"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgVestimenta"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+
+            <Button
+                android:id="@+id/btnVestimenta"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+
+            <TextView
+                android:id="@+id/cajeraTex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="RESPONSABILIDADES DE CAJERA"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgCajera"
+                android:layout_width="99dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/imagendocumentacion" />
+
+
+            <Button
+                android:id="@+id/btnCajera"
+                android:layout_width="42dp"
+                android:layout_height="37dp"
+                android:background="@drawable/camarafotos" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/separador" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView9prove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Observaciones"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollFotos" />
+
+    <EditText
+        android:id="@+id/editObservaciones"
+        android:layout_width="321dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9prove"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView69"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Etapa :"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/numEtapa"
+        android:layout_width="45dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView69"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="5dp"
+        android:text="PUESTO : "
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cmbCandidatos" />
+
+    <TextView
+        android:id="@+id/textPuesto"
+        android:layout_width="283dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toEndOf="@+id/textView72"
+        app:layout_constraintTop_toBottomOf="@+id/cmbCandidatos" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="45dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/numEtapa"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/reclutamiento" />
+
+    <TextView
+        android:id="@+id/textView70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="1.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toEndOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

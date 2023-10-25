@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/casavargas"
+    tools:context=".Main.guardarCompraTransfer">
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="720dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/envio" />
+
+    <TextView
+        android:id="@+id/textView67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:text="vers 1.0"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView17"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/codigobarras"
+        android:layout_width="195dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kfsmkdfs" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="219dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="76dp"
+        android:text="Cantidad de la Orden de Compra"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toEndOf="@+id/textView39"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/unidadMedidaCompra"
+        android:layout_width="60dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toEndOf="@+id/unidadMedida"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+    <ImageButton
+        android:id="@+id/btnGuardarArticulo"
+        android:layout_width="80dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadOrdenCompra"
+        app:srcCompat="@mipmap/disco" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="76dp"
+        android:text="Cantidad"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/codigobarras"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/cantidadContada"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/idclaveart"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+    <TextView
+        android:id="@+id/unidadMedida"
+        android:layout_width="60dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/textView40"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="8dp"
+        android:text="DESCRIPCION DE ARTICULO"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idclaveart" />
+
+    <TextView
+        android:id="@+id/idclaveart"
+        android:layout_width="194dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+    <EditText
+        android:id="@+id/cantidadOrdenCompra"
+        android:layout_width="106dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+
+        app:layout_constraintStart_toEndOf="@+id/unidadMedida"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+    <TextView
+        android:id="@+id/kfsmkdfs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="CODIGO DE BARRAS"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="8dp"
+        android:text="CLAVE ARTICULO"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codigobarras" />
+
+    <TextView
+        android:id="@+id/idnombreArt"
+        android:layout_width="240dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="121dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/textView41"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadContada">
+
+        <RadioButton
+            android:id="@+id/rb_caja"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:text="CAJAS" />
+
+        <RadioButton
+            android:id="@+id/rb_piezas"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:text="PIEZAS" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="131dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toEndOf="@+id/btnGuardarArticulo"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadOrdenCompra">
+
+        <RadioButton
+            android:id="@+id/rb_bulto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BULTOS" />
+
+        <RadioButton
+            android:id="@+id/rb_kilos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KILOS" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

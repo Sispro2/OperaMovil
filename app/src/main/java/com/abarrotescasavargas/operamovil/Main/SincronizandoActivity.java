@@ -32,6 +32,7 @@ import com.abarrotescasavargas.operamovil.Main.Mantenimiento.ResponseReporteMant
 import com.abarrotescasavargas.operamovil.Main.Mantenimiento.RetrofitMantto;
 import com.abarrotescasavargas.operamovil.Main.Repository.SucursalRepository;
 import com.abarrotescasavargas.operamovil.Main.Transferencias.TransferenciasActivity;
+import com.abarrotescasavargas.operamovil.Main.Verificador.ActivityVerificador;
 import com.abarrotescasavargas.operamovil.R;
 
 import java.sql.ResultSet;
@@ -158,7 +159,7 @@ public class SincronizandoActivity extends AppCompatActivity {
 
     private void CargaVerificador(String parametro1, String parametro2) {
         progressDialog.cancel();
-        Intent intent = new Intent(getApplicationContext(), VerificadorProductos.class);
+        Intent intent = new Intent(getApplicationContext(), ActivityVerificador.class);
         intent.putExtra("Parametro1", parametro1);
         intent.putExtra("Parametro2", parametro2);
         startActivity(intent);
@@ -337,7 +338,7 @@ public class SincronizandoActivity extends AppCompatActivity {
                 if (!stopThread) {
                     Log.d(TAG, "VerificadorThread: " + i);
                     try {
-                        Thread.sleep(1000); // solo lo puse para validar como se detiene un poco el proceso
+                        Thread.sleep(100); // solo lo puse para validar como se detiene un poco el proceso
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
