@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/cd_descsuper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cd_desc_super"
+            android:textColor="@color/acvblue"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/cd_cantidad"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/cd_cantidad"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                android:imeOptions="actionDone"
+                android:autofillHints="no" />
+
+            <TextView
+                android:id="@+id/cd_unidad"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cd_unidad"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/acvorange"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cd_guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/boton_redondo"
+            android:text="@string/cd_guardar"
+            android:textColor="@color/acvwhite"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>

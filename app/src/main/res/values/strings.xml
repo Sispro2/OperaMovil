@@ -16,7 +16,7 @@
     <string name="title_activity_login">Lista de Verificación</string>
 
 
-    <string name="prompt_email">Usuario de Sinfonía</string>
+    <string name="prompt_email">Seleccione un usuario</string>
     <string name="prompt_password">Contraseña</string>
     <string name="lg_mensaje">Introduzca Usuario y Contraseña</string>
     <string name="btn_login">Ingresar</string>

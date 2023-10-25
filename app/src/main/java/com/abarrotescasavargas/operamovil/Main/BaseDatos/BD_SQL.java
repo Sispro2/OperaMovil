@@ -114,6 +114,7 @@ public class BD_SQL {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+
             return null;
         } catch (IllegalAccessException | InstantiationException | ClassNotFoundException e) {
             e.printStackTrace();

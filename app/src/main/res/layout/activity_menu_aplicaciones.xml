@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/acvwhite">
+
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="407dp"
+        android:layout_height="110dp"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            app:srcCompat="@drawable/logohorizontal" />
+
+        <!--<TextView
+            android:id="@+id/textView6"
+            android:layout_width="392dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:text="MENÚ"
+            android:textColor="@color/colorTextButton"
+            android:textSize="20sp"
+            android:textStyle="italic" />-->
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnproveedor"
+        android:layout_width="111dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="52dp"
+        android:backgroundTint="@color/acvwhite"
+        app:layout_constraintEnd_toStartOf="@+id/btnreclutamiento"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11"
+        app:srcCompat="@mipmap/camion"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView9prove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:fontFamily="@font/rubikbold"
+        android:text="@string/mn_proveedores"
+        android:textColor="@color/acvorange"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView10Reclu"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnproveedor" />
+
+    <ImageButton
+        android:id="@+id/btnreclutamiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/acvwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11"
+        app:srcCompat="@mipmap/reclutamiento"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView10Reclu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@font/rubikbold"
+        android:text="@string/mn_reclutamiento"
+        android:textColor="@color/acvorange"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnreclutamiento" />
+
+    <ImageButton
+        android:id="@+id/btnVerificador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="61dp"
+        android:backgroundTint="@color/acvwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10Reclu"
+        app:srcCompat="@mipmap/lector"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btnCompraTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="263dp"
+        android:backgroundTint="@color/acvwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView80"
+        app:srcCompat="@mipmap/envio"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView11Reza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="26dp"
+        android:fontFamily="@font/rubikbold"
+        android:text="@string/mn_lento"
+        android:textAlignment="center"
+        android:textColor="@color/acvorange"
+
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView37Veri"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnrezagado" />
+
+    <ImageButton
+        android:id="@+id/btnTransferencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="9dp"
+        android:backgroundTint="@color/acvwhite"
+        app:layout_constraintEnd_toStartOf="@+id/btnMantenimiento"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14ventas"
+        app:srcCompat="@mipmap/entrega" />
+
+    <ImageButton
+        android:id="@+id/btnNuevoArticulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/acvwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView37Veri"
+        app:srcCompat="@mipmap/nuevoproducto"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btnMantenimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/acvwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView49"
+        app:srcCompat="@mipmap/mantenimiento" />
+
+    <TextView
+        android:id="@+id/textView80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:fontFamily="@font/rubikbold"
+        android:text="@string/mn_transferencias"
+        android:textColor="@color/acvorange"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView77"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTransferencia" />
+
+    <TextView
+        android:id="@+id/textView26compra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="216dp"
+        android:fontFamily="@font/rubikbold"
+        android:text="@string/mn_recepcion"
+        android:textColor="@color/acvorange"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCompraTransfer" />
+
+    <ImageButton
+        android:id="@+id/btnConcursoVentas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/acvwhite"
+        app:layout_constraintEnd_toStartOf="@+id/btnNuevoArticulo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11Reza"
+        app:srcCompat="@mipmap/ventas"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView14ventas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/rubikbold"
+        android:text="@string/mn_concurso"
+        android:textColor="@color/acvorange"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView49"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConcursoVentas" />
+
+    <ImageButton
+        android:id="@+id/btnrezagado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="21dp"
+        android:backgroundTint="@color/acvwhite"
+        app:layout_constraintEnd_toStartOf="@+id/btnVerificador"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9prove"
+        app:srcCompat="@mipmap/lento"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="43dp"
+        android:fontFamily="@font/rubikbold"
+        android:text="@string/mn_articulo"
+        android:textColor="@color/acvorange"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNuevoArticulo" />
+
+    <TextView
+        android:id="@+id/textView77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="43dp"
+        android:fontFamily="@font/rubikbold"
+        android:text="@string/mn_mantenimiento"
+        android:textColor="@color/acvorange"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMantenimiento" />
+
+    <TextView
+        android:id="@+id/textView37Veri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="62dp"
+        android:fontFamily="@font/rubikbold"
+        android:text="@string/mn_verificador"
+        android:textColor="@color/acvorange"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerificador" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

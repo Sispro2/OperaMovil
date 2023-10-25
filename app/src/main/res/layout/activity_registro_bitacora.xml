@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/back_img2"    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".RegistroBitacora">
+        <Button
+            android:id="@+id/btn_scanear_qr"
+            android:layout_width="250dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@color/acvblue"
+            android:text="ESCANEAR QR"
+            android:textColor="@color/acvwhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtRazonSocial"
+            android:layout_width="358dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:background="@color/acvwhite"
+            android:gravity="start"
+            android:text="Razón Social:"
+            android:textColor="@color/acvblue"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_scanear_qr" />
+
+        <TextView
+            android:id="@+id/txtNumeroProveedor"
+            android:layout_width="358dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:background="@color/acvwhite"
+            android:gravity="start"
+            android:text="Número de Proveedor:"
+            android:textColor="@color/acvblue"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtRazonSocial" />
+
+        <EditText
+            android:id="@+id/edit_numero_factura"
+            android:layout_width="162dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Número de Factura"
+            android:inputType="numberSigned"
+            android:maxLength="6"
+            android:textColor="@color/acvblue"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/edit_Placas"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumeroProveedor" />
+
+        <EditText
+            android:id="@+id/edit_nombre_transportista"
+            android:layout_width="231dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="140dp"
+            android:ems="10"
+            android:hint="Nombre del Transportista"
+            android:inputType="textNoSuggestions"
+            android:maxLength="50"
+            android:textColor="@color/acvblue"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_sello" />
+
+        <EditText
+            android:id="@+id/edit_nombre_recibe"
+            android:layout_width="231dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="140dp"
+            android:ems="10"
+            android:hint="Nombre de Quien Recibe"
+            android:inputType="textNoSuggestions"
+            android:maxLength="50"
+            android:textColor="@color/acvblue"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_firma_transportista" />
+
+        <Button
+            android:id="@+id/btn_firma_transportista"
+            android:layout_width="231dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/acvorange"
+            android:text="FIRMAR"
+            android:textColor="@color/acvwhite"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/img_firma_transportista"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_nombre_transportista" />
+
+        <Button
+            android:id="@+id/btn_firma_recibe"
+            android:layout_width="231dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/acvorange"
+            android:text="FIRMAR"
+            android:textColor="@color/acvwhite"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/img_firma_recibe"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_nombre_recibe" />
+
+        <EditText
+            android:id="@+id/edit_Placas"
+            android:layout_width="170dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            android:hint="Placas"
+            android:inputType="textNoSuggestions"
+            android:maxLength="8"
+            android:textColor="@color/acvblue"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumeroProveedor" />
+
+        <ImageView
+            android:id="@+id/img_transporte"
+            android:layout_width="108dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="235dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <ImageView
+            android:id="@+id/img_sello"
+            android:layout_width="108dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="235dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView25"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="94dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="249dp"
+            android:background="@color/acvwhite"
+            android:text="Transporte"
+            android:textColor="@color/acvblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_numero_factura" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="109dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="272dp"
+            android:background="@color/acvwhite"
+            android:text="Sello"
+            android:textColor="@color/acvblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_transporte" />
+
+        <ImageView
+            android:id="@+id/img_firma_transportista"
+            android:layout_width="108dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="277dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_factura" />
+
+        <ImageView
+            android:id="@+id/img_firma_recibe"
+            android:layout_width="108dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="277dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_firma_transportista" />
+
+        <ImageView
+            android:id="@+id/ivPlacas"
+            android:layout_width="108dp"
+            android:layout_height="93dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/img_transporte"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <ImageView
+            android:id="@+id/img_factura"
+            android:layout_width="108dp"
+            android:layout_height="93dp"
+            android:layout_marginEnd="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/img_sello"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="111dp"
+            android:background="@color/acvwhite"
+            android:text="Placas"
+            android:textColor="@color/acvblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/edit_Placas" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="111dp"
+            android:background="@color/acvwhite"
+            android:text="Factura"
+            android:textColor="@color/acvblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/ivPlacas" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="250dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/acvorange"
+            android:text="Guardar"
+            android:textColor="@color/acvwhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_observaciones" />
+
+        <EditText
+            android:id="@+id/edit_observaciones"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="35dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Observaciones"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_firma_recibe" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
