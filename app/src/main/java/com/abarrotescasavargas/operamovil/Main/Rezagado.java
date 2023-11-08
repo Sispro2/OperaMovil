@@ -338,7 +338,7 @@ public class Rezagado extends AppCompatActivity implements AdapterARTREZA.Recycl
                     dataRez.setRI_FECDAT(data.getString(7));
                     dataRez.setRI_EXISTE(data.getString(9));
                     dataRez.setRI_DIASVT(data.getString(8));
-                    dataRez.setRI_URLWEB(data.getString(15));
+                    dataRez.setRI_URLWEB(data.getString("RI_URLWEB"));
 
                     // Llama a la función setDataRez para realizar alguna acción con los datos
                     bandera = setDataRez(dataRez, context);

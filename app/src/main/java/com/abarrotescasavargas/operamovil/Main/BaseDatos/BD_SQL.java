@@ -13,6 +13,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class BD_SQL {
@@ -52,6 +54,85 @@ public class BD_SQL {
             cn.close();
         } catch (Exception e) {
             Log.v("Error ObtenerExistenciaTotalClave", e.toString());
+        }
+        return null;
+    }
+    public static String ObtenerExistenciaTotalUnidad(String cveArticulo) {
+        try {
+            Connection cn = DriverManager.getConnection(CreaCadenaConexion());
+            String storedProcedureCall = "{ call dbo.ObtenerExistenciaTotalClave(?) }";
+            CallableStatement cS = cn.prepareCall(storedProcedureCall);
+            cS.setString(1, cveArticulo);
+            cS.execute();
+
+            // Obtén el valor de la columna 'ExistenciaUnidadVenta' desde el procedimiento almacenado
+            ResultSet resultSet = cS.getResultSet();
+            if (resultSet.next()) {
+                String existenciaUnidadVenta = resultSet.getString("UnidadVenta");
+                resultSet.close();
+                cS.close();
+                cn.close();
+                return existenciaUnidadVenta;
+            }
+
+            // Cierra los recursos y la conexión
+            resultSet.close();
+            cS.close();
+            cn.close();
+        } catch (Exception e) {
+            Log.v("Error ObtenerExistenciaTotalClave", e.toString());
+        }
+        return null;
+    }
+    public static String getPrecios(String cveArticulo) {
+        try {
+            Connection cn = DriverManager.getConnection(CreaCadenaConexion());
+            String storedProcedureCall = "{ call dbo.spConsultaArticuloPrecioPorClave (?) }";
+            CallableStatement cS = cn.prepareCall(storedProcedureCall);
+            cS.setString(1, cveArticulo);
+            cS.execute();
+
+            List<String> resultados = new ArrayList<>();
+
+            ResultSet resultSet = cS.getResultSet();
+            while (resultSet.next()) {
+                int inicio = resultSet.getInt("no_orden") - 1;
+                int fin = resultSet.getInt("cantidad") - 1;
+                double precio = resultSet.getDouble("PrecioVenta");
+
+                String resultado = String.format("de %d a %d | %.2f", inicio, fin, precio);
+                resultados.add(resultado);
+            }
+            return String.join("\n", resultados);
+        } catch (Exception e) {
+            Log.v("Error ObtenerExistenciaTotalClave", e.toString());
+        }
+        return null;
+    }
+    public static ResultSet ejecutaStoredProcedure(String storedProcedure,List<String> dataList)
+    {
+//        FORMA DE USO                                                    NOMBRE SP                LISTA CON PARAMETROS
+//        ResultSet getConsulta = BD_SQL.ejecutaStoredProcedure("spConsultaArticuloPrecioPorClave",List.of("le021"));
+        try {
+            String parametro=" (?) ";
+            String parametros=parametro.repeat(dataList.size());
+
+            String storedProcedureCall = "{ call "+storedProcedure+parametros+"}";
+
+            Connection cn = DriverManager.getConnection(CreaCadenaConexion());
+            CallableStatement cS = cn.prepareCall(storedProcedureCall);
+
+            for (int i = 0; i < dataList.size(); i++) {
+                cS.setString(i+1, dataList.get(i));
+            }
+
+            cS.execute();
+
+            ResultSet resultSet = cS.getResultSet();
+
+            return resultSet;
+        } catch (Exception e) {
+            Log.v("Error: ", e.toString());
         }
         return null;
     }

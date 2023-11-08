@@ -246,6 +246,7 @@ public class LoginActivity extends AppCompatActivity implements TareaMensajeInte
     {
         stopThread=true;
         progressDialog.cancel();
+
         if (!bandera)
         {
             Toast.makeText(context, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
@@ -262,6 +263,7 @@ public class LoginActivity extends AppCompatActivity implements TareaMensajeInte
             overridePendingTransition(R.transition.in_left, R.transition.out_left);
             finish();
         }
+
     }
     class loginRunnable implements Runnable {
         String cveSucursal;
@@ -297,7 +299,7 @@ public class LoginActivity extends AppCompatActivity implements TareaMensajeInte
     public List<String> consultaDB() {
         String query = "SELECT clave \n" +
                 "FROM [dbo].[usuario] \n" +
-                "WHERE id_perfil IN (1, 2, 3, 4, 5, 6, 7, 11) \n" +
+                "WHERE id_perfil IN (1, 2, 3, 4, 5, 6, 7, 11,14) \n" +
                 "  AND activo = 1\n" +
                 "  AND clave NOT LIKE 'TFRCORP%' \n" +
                 "  AND clave NOT LIKE 'CONT%' \n" +
@@ -329,7 +331,6 @@ public class LoginActivity extends AppCompatActivity implements TareaMensajeInte
     public void ValidaInicio(View view) {
 
         cerrarTeclado();
-
         if (txtUsuario.getSelectedItem().toString().equals("") || txtPassW.getText().toString().equals("")) {
             Toast.makeText(this, R.string.lg_mensaje, Toast.LENGTH_SHORT).show();
         } else {
