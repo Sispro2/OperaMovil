@@ -33,6 +33,7 @@ import com.abarrotescasavargas.operamovil.Main.Mantenimiento.RetrofitMantto;
 import com.abarrotescasavargas.operamovil.Main.Repository.SucursalRepository;
 import com.abarrotescasavargas.operamovil.Main.Transferencias.TransferenciasActivity;
 import com.abarrotescasavargas.operamovil.Main.Verificador.ActivityVerificador;
+import com.abarrotescasavargas.operamovil.Main.Verificador.VerificadorRepository;
 import com.abarrotescasavargas.operamovil.R;
 
 import java.sql.ResultSet;
@@ -158,15 +159,15 @@ public class SincronizandoActivity extends AppCompatActivity {
     }
 
     private void CargaVerificador(String parametro1, String parametro2) {
-        progressDialog.cancel();
+        // Crear un Intent y agregar los datos extra
         Intent intent = new Intent(getApplicationContext(), ActivityVerificador.class);
-        intent.putExtra("Parametro1", parametro1);
-        intent.putExtra("Parametro2", parametro2);
+        VerificadorRepository verificadorRepository = new VerificadorRepository();
         startActivity(intent);
         overridePendingTransition(R.transition.in_left, R.transition.out_left);
-        sucursalRepository.insertLog("Verificador","Entrada al modulo");
+        sucursalRepository.insertLog("Verificador", "Entrada al modulo");
         finish();
     }
+
 
     private void CargaNuevo(ArrayList<DBArticuloNuevo> dataList, ArrayList<String> dataSpinner) {
         progressDialog.cancel();
