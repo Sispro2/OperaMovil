@@ -7,14 +7,22 @@ public class DetallePremovimiento {
     private String  DESC_SUPER;
     private String  CODIGO_BARRAS1;
     private String  CODIGO_BARRAS2;
-    private String  CANTIDAD;
+    private float  CANTIDAD;
     private String  RECIBIDO;
     private String  CLAVE;
     private String  UNIDAD;
     private int  STATUS;
     private  int ID_PREMOVIMIENTO_ALMACEN;
 
+    private  float COSTO_UNITARIO;
 
+    public float getCOSTO_UNITARIO() {
+        return COSTO_UNITARIO;
+    }
+
+    public void setCOSTO_UNITARIO(float COSTO_UNITARIO) {
+        this.COSTO_UNITARIO = COSTO_UNITARIO;
+    }
 
     public int getID_PREMOVIMIENTO_ALMACEN() {
         return ID_PREMOVIMIENTO_ALMACEN;
@@ -23,8 +31,6 @@ public class DetallePremovimiento {
     public void setID_PREMOVIMIENTO_ALMACEN(int ID_PREMOVIMIENTO_ALMACEN) {
         this.ID_PREMOVIMIENTO_ALMACEN = ID_PREMOVIMIENTO_ALMACEN;
     }
-
-
 
     public int getID_ARTICULO() {
         return ID_ARTICULO;
@@ -66,11 +72,11 @@ public class DetallePremovimiento {
         this.CODIGO_BARRAS2 = CODIGO_BARRAS2;
     }
 
-    public String getCANTIDAD() {
+    public float getCANTIDAD() {
         return CANTIDAD;
     }
 
-    public void setCANTIDAD(String CANTIDAD) {
+    public void setCANTIDAD(float CANTIDAD) {
         this.CANTIDAD = CANTIDAD;
     }
 

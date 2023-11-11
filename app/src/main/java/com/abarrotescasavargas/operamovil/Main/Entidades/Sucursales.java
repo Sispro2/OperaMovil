@@ -12,6 +12,15 @@ public class Sucursales {
 
     private String KS_CVEUSR;
 
+    private  int KS_IDUSUARIO;
+
+    public int getKS_IDUSUARIO() {
+        return KS_IDUSUARIO;
+    }
+
+    public void setKS_IDUSUARIO(int KS_IDUSUARIO) {
+        this.KS_IDUSUARIO = KS_IDUSUARIO;
+    }
 
     public String getKS_CVESUC() {
         return KS_CVESUC;

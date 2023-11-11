@@ -44,6 +44,17 @@
             android:name=".Main.Candidatos.ActivityCandidatos"
             android:exported="false" />
         <activity
+            android:name=".Main.Transferencias.TransferenciasActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Main.DetalleTransferencias.DetalleTranferencias"
+            android:exported="false" />
+
+
+
+
+        <activity
             android:name=".Main.activity_menu_2"
             android:exported="false" />
         <activity

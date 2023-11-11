@@ -1,6 +1,7 @@
 package com.abarrotescasavargas.operamovil.Main.DetalleTransferencias;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.abarrotescasavargas.operamovil.Main.FunGenerales.Funciones;
 import com.abarrotescasavargas.operamovil.R;
 
 import java.util.List;
@@ -80,8 +82,7 @@ public class ListMovAlmDetalleAdapter extends RecyclerView.Adapter<ListMovAlmDet
 
         void bindData(final listaDetalles item) {
             txtClave.setText(context.getString(R.string.DT_clave, item.getClave()));
-            //txtDescripcion.setText(context.getString(R.string.DT_descripcion, item.getUnidad()));
-            txtDescripcion.setText(context.getString(R.string.DT_descripcion, item.getDescSuper()));
+            setTextWithMarquee(txtDescripcion, item.getDescSuper());
             txtStatus.setText(Objects.equals(item.getStatus(), "0") ? "" : context.getString(R.string.DT_validada));
             if (!Objects.equals(item.getStatus(), "0")) {
                 txtCantidad.setText(context.getString(R.string.DT_cantidad, item.getCantidad(), item.getUnidad()));
@@ -89,11 +90,18 @@ public class ListMovAlmDetalleAdapter extends RecyclerView.Adapter<ListMovAlmDet
             else{
                 txtCantidad.setText("");
             }
-            /*else {
-                txtCantidad.setText(context.getString(R.string.DT_cantidad, "", ""));
-            }*/
-            // txtCantidad.setText(context.getString(R.string.DT_cantidad, item.getCantidad(), item.getMedida()));
             itemView.setOnClickListener(v -> listener.onItemClick(item));
         }
+
+
+        private  void setTextWithMarquee(TextView textView, String text) {
+            if (textView != null && !TextUtils.isEmpty(text)) {
+                textView.setText(text);
+                textView.setSelected(true);
+                textView.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+                textView.setSingleLine(true);
+            }
+        }
+
     }
 }

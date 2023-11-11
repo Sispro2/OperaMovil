@@ -28,9 +28,14 @@
                 android:id="@+id/linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
+                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="9dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="14dp"
+                android:layout_toStartOf="@+id/txtvStatus"
                 android:orientation="vertical">
 
                 <TextView
@@ -56,7 +61,7 @@
 
                 <TextView
                     android:id="@+id/txtTotal"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/acvwhite"
                     android:text="@string/T_total_articulos"
@@ -66,7 +71,7 @@
 
                 <TextView
                     android:id="@+id/txtContados"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/acvwhite"
                     android:text="@string/T_contados"
@@ -100,13 +105,15 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
                 android:layout_marginStart="14dp"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="2dp"
                 android:orientation="vertical">
+
                 <SearchView
                     android:id="@+id/srcBuscar"
-                    android:layout_width="350dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:background="@drawable/marco_orange"
                     android:iconifiedByDefault="false"
                     android:queryHint="Clave y/o descripción" />
@@ -116,9 +123,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reciclerDetalle"
-        android:layout_width="413dp"
-        android:layout_height="613dp"
-        android:layout_marginTop="185dp"
+        android:layout_width="410dp"
+        android:layout_height="542dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

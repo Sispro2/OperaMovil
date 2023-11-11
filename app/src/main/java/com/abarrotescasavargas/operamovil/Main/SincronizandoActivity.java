@@ -208,14 +208,14 @@ public class SincronizandoActivity extends AppCompatActivity {
     }
 
     private void CargaTransferencia(String parametro1, String parametro2) {
-//        progressDialog.cancel();
-//        Intent intent = new Intent(getApplicationContext(), TransferenciasActivity.class);
-//        intent.putExtra("Parametro1", parametro1);
-//        intent.putExtra("Parametro2", parametro2);
-//        startActivity(intent);
-//        overridePendingTransition(R.transition.in_left, R.transition.out_left);
-//        sucursalRepository.insertLog("Transferencias","Entrada al modulo");
-//        finish();
+        progressDialog.cancel();
+        Intent intent = new Intent(getApplicationContext(), TransferenciasActivity.class);
+        intent.putExtra("Parametro1", parametro1);
+        intent.putExtra("Parametro2", parametro2);
+        startActivity(intent);
+        overridePendingTransition(R.transition.in_left, R.transition.out_left);
+        sucursalRepository.insertLog("Transferencias","Entrada al modulo");
+        finish();
     }
 
     @Override
@@ -567,7 +567,7 @@ public class SincronizandoActivity extends AppCompatActivity {
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
-                    if (i == 15) {
+                    if (i == 1) {
                         mainHandler.post(() -> {
                             CargaTransferencia(cveSucursal, idReclutamiento);
                         });
