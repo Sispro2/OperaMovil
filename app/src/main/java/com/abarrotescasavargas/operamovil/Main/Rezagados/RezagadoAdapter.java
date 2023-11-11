@@ -19,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.abarrotescasavargas.operamovil.Main.BaseDatos.BD_SQL;
 import com.abarrotescasavargas.operamovil.Main.Menu2.DBRezagado;
 import com.abarrotescasavargas.operamovil.R;
 import com.bumptech.glide.Glide;
@@ -173,7 +174,7 @@ public class RezagadoAdapter extends RecyclerView.Adapter<RezagadoAdapter.ViewHo
             setTextWithMarquee(RI_CVEART, item.getRI_CVEART());
             setTextWithMarquee(RI_NOMART, item.getRI_NOMART());
             setTextWithMarquee(RI_FECDAT, expresionesRegulares(item.getRI_FECDAT()));
-            setTextWithMarquee(RI_EXISTE, "Existencia: " + item.getRI_EXISTE());
+            setTextWithMarquee(RI_EXISTE, "Existencia inicial: " + item.getRI_EXISTE() +"| Existencia actual: "+ BD_SQL.ObtenerExistenciaTotalClave(item.getRI_CVEART()));
             setTextWithMarquee(RI_DIASREZ, "Días en existencia: " + item.getRI_DIASVT());
             //Validar que el campo exista en la tabla
 

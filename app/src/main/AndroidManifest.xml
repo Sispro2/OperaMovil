@@ -81,9 +81,8 @@
             android:theme="@style/AppTheme"/>
         <activity
             android:name=".Main.Verificador.ActivityVerificador"
-            android:screenOrientation="fullSensor"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:label="Articulo Nuevo"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".Main.Verificador.CaptureActivityPortrait"
             android:exported="false"
