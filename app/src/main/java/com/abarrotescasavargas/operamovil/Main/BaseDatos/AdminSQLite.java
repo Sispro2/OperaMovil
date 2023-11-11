@@ -13,13 +13,11 @@ public class AdminSQLite extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // aqui se crean las tablas
-
         db.execSQL("create table Articulos (clave,codigoBarras1,codigoBarras2,descripcion)");
 
         db.execSQL("create table prueba (proveedor,fecha,HoraEntre,clavePro,numFactura,placas,nomTransportista,nomRecibido,observaciones,sqlRFCPRO, sqlFOLFIS, sqlIMPORT)");
 
         db.execSQL("create table transferencia (id_articulo , cantidad_Contada , nombreArt,unidadRealMedida,idTransferencia)");
-
         // pintar la tabla //
         db.execSQL("create table pintarTabla (claveArt,id_articulo)");
 

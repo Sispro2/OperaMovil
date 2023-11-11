@@ -72,7 +72,7 @@ public class ListTransferenciasAdapter extends RecyclerView.Adapter<ListTransfer
         void bindData(final listTransferencias item) {
             //folio.setText(item.getFolio());
             folio.setText(context.getString(R.string.TD_folio, item.getFolio()));
-            envia.setText(context.getString(R.string.TD_sucursal_origen, item.getOrigen()));
+            envia.setText(context.getString(R.string.TD_sucursal_origen, item.getSucOrigen()));
            /* envia.setText(context.getString(R.string.TD_sucursal_origen, item.getSucursalOrigen()));
             recibe.setText(context.getString(R.string.TD_sucursal_destino, item.getSucursalDestino()));*/
             itemView.setOnClickListener(v -> listener.onItemClick(item));

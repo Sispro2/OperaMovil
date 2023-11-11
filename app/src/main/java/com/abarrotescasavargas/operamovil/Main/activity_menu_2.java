@@ -106,11 +106,11 @@ public class activity_menu_2 extends AppCompatActivity {
 
         btnTransferencia.setOnClickListener(v->{
 
-//            Intent intent = new Intent(getApplicationContext(), SincronizandoActivity.class);
-//            intent.putExtra("origen","TRANSFERENCIA");
-//            startActivity(intent);
-//            overridePendingTransition(R.transition.in_left, R.transition.out_left);
-            creaPopUp();
+            Intent intent = new Intent(getApplicationContext(), SincronizandoActivity.class);
+            intent.putExtra("origen","TRANSFERENCIA");
+            startActivity(intent);
+            overridePendingTransition(R.transition.in_left, R.transition.out_left);
+           // creaPopUp();
         });
     }
 }

@@ -46,7 +46,7 @@
                     android:layout_marginBottom="2dp"
                     android:text="@string/DT_clave"
                     android:textColor="@color/acvblue"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"/>
                 <TextView
                     android:id="@+id/txtDescripcion"
@@ -55,14 +55,14 @@
                     android:text="@string/DT_descripcion"
                     android:textColor="@color/acvblue"
                     android:textStyle="bold"
-                    android:textSize="11sp"/>
+                    android:textSize="12sp"/>
                 <TextView
                     android:id="@+id/txtCantidad"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/acvblack"
                     android:text="@string/DT_cantidad"
-                    android:textSize="15sp"/>
+                    android:textSize="12sp"/>
                 <!--<<TextView
                    android:id="@+id/txtCantidadEnviada"
                    android:layout_width="match_parent"
@@ -78,18 +78,18 @@
                    android:textColor="@color/black"
                    android:textSize="15sp"/>-->
             </LinearLayout>
+
             <TextView
                 android:id="@+id/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="6dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="24dp"
                 android:text="@string/DT_validada"
                 android:textColor="@color/acvorange"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"/>
+                android:textStyle="bold" />
         </RelativeLayout>
     </LinearLayout>
 

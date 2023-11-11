@@ -58,15 +58,15 @@
     <!-- Aquí van las String de los detalles de las  Transferencias  Rafael Lemus  24 Junio 2023 -->
     <string name="T_folio_transferencia">Folio: %1$S</string>
     <string name="T_sucursal_origen">Origen: %1$S</string>
-    <string name="T_total_articulos">Total de Artículos: %1$d</string>
+    <string name="T_total_articulos">Claves: %1$d</string>
     <string name="T_finalizar">Finalizar</string>
     <string name="T_observaciones">%1$S</string>
     <string name="T_contados">Contados: %1$S</string>
 
 
     <string name="DT_clave">Clave: %1$S</string>
-    <string name="DT_cantidad">Se Reciben: %1$S %2$S</string>
-    <string name="DT_cantidadenviada">Enviada: %1$S %2$S</string>
+    <string name="DT_cantidad">Se Reciben: %1$.2f  %2$S</string>
+    <string name="DT_cantidadenviada">Enviada: %1$.2f %2$S</string>
     <string name="DT_descripcion">%1$S</string>
     <string name="DT_validada">Validada</string>
 

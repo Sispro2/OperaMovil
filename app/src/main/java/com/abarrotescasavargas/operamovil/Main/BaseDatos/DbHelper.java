@@ -23,7 +23,7 @@ public class DbHelper extends SQLiteOpenHelper {
             OperaMovilContract.SUCURSAL.IP_DEV + " TEXT NOT NULL," +
             OperaMovilContract.SUCURSAL.PABASE_DEV + " TEXT NOT NULL,"+
             OperaMovilContract.SUCURSAL.CVETRA+" TEXT , " +
-            OperaMovilContract.SUCURSAL.ANDRID +" TEXT  ); ";
+            OperaMovilContract.SUCURSAL.ANDRID +" TEXT , "+OperaMovilContract.SUCURSAL.ID_USUARIO+" INTEGER  ); ";
 
     static String Sucursales = "CREATE TABLE " + OperaMovilContract.KSUCURSALES.Table + " (" +
             OperaMovilContract.KSUCURSALES._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -41,7 +41,13 @@ public class DbHelper extends SQLiteOpenHelper {
             OperaMovilContract.PREMOVIMIENTO_ALMACEN.ID_PREMOVIMIENTO_ALMACEN + " TEXT NOT NULL," +
             OperaMovilContract.PREMOVIMIENTO_ALMACEN.FOLIO + " TEXT NOT NULL," +
             OperaMovilContract.PREMOVIMIENTO_ALMACEN.OBSERVACIONES + " TEXT NOT NULL," +
-            OperaMovilContract.PREMOVIMIENTO_ALMACEN.ID_SUCURSAL_ORIGEN + " TEXT NOT NULL" +
+            OperaMovilContract.PREMOVIMIENTO_ALMACEN.ID_SUCURSAL_ORIGEN + " INTEGER NOT NULL, " +
+            OperaMovilContract.PREMOVIMIENTO_ALMACEN.ID_SUCURSAL_DESTINO + " INTEGER NOT NULL, " +
+            OperaMovilContract.PREMOVIMIENTO_ALMACEN.SUBTOTAL + " FLOAT NOT NULL, " +
+            OperaMovilContract.PREMOVIMIENTO_ALMACEN.TOTAL_NETO + " FLOAT NOT NULL, " +
+            OperaMovilContract.PREMOVIMIENTO_ALMACEN.REFERENCIA + " TEXT NOT NULL, " +
+            OperaMovilContract.PREMOVIMIENTO_ALMACEN.TOTAL_IVA + " FLOAT NOT NULL, " +
+            OperaMovilContract.PREMOVIMIENTO_ALMACEN.TOTAL_IEPS + " FLOAT NOT NULL " +
             "); ";
 
     static String DETALLE_TRANSFERENCIA= "CREATE TABLE "+OperaMovilContract.DETALLE_TRANSFERENCIA.Table +"(" +
@@ -52,11 +58,12 @@ public class DbHelper extends SQLiteOpenHelper {
             OperaMovilContract.DETALLE_TRANSFERENCIA.DESC_SUPER + " TEXT NOT NULL," +
             OperaMovilContract.DETALLE_TRANSFERENCIA.CODIGO_BARRAS1 + " TEXT NOT NULL," +
             OperaMovilContract.DETALLE_TRANSFERENCIA.CODIGO_BARRAS2 + " TEXT NOT NULL," +
-            OperaMovilContract.DETALLE_TRANSFERENCIA.CANTIDAD + " TEXT NOT NULL," +
+            OperaMovilContract.DETALLE_TRANSFERENCIA.CANTIDAD + " FLOAT NOT NULL," +
             OperaMovilContract.DETALLE_TRANSFERENCIA.RECIBIDO + " TEXT ," +
             OperaMovilContract.DETALLE_TRANSFERENCIA.CLAVE + " TEXT NOT NULL," +
             OperaMovilContract.DETALLE_TRANSFERENCIA.UNIDAD + " TEXT NOT NULL ," +
-            OperaMovilContract.DETALLE_TRANSFERENCIA.STATUS + " INTEGER NOT NULL " +
+            OperaMovilContract.DETALLE_TRANSFERENCIA.STATUS + " INTEGER NOT NULL, " +
+            OperaMovilContract.DETALLE_TRANSFERENCIA.COSTO_UNITARIO + " FLOAT NOT NULL " +
             ");";
     static String ARTICULOS= "CREATE TABLE "+OperaMovilContract.ARTICULO.Table +"(" +
             OperaMovilContract.ARTICULO._ID + " INTEGER PRIMARY KEY AUTOINCREMENT ," +

@@ -1,7 +1,6 @@
 package com.abarrotescasavargas.operamovil.Main.Verificador;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;

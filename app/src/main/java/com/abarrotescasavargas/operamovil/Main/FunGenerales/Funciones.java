@@ -9,7 +9,9 @@ import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.text.TextUtils;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -171,6 +173,15 @@ public class Funciones {
             return file;
         } catch (Exception e) {
             return null;
+        }
+    }
+
+    public static void setTextWithMarquee(TextView textView, String text) {
+        if (textView != null && !TextUtils.isEmpty(text)) {
+            textView.setText(text);
+            textView.setSelected(true); // Activa el efecto de marquesina
+            textView.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+            textView.setSingleLine(true);
         }
     }
 

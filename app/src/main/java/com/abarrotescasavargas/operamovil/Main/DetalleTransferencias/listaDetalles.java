@@ -10,14 +10,14 @@ public class listaDetalles implements Serializable {
     private String DescSuper;
     private String CodigoBarras1;
     private String CodigoBarras2;
-    private String Cantidad;
+    private float Cantidad;
     private String Clave;
     private String Unidad;
     private String Status;
 
 
 
-    public listaDetalles(int idArticulo, int idPremovimientoAlmacen, String descMayoreo, String descSuper, String codigoBarras1, String codigoBarras2, String cantidad, String clave, String unidad, String recibido) {
+    public listaDetalles(int idArticulo, int idPremovimientoAlmacen, String descMayoreo, String descSuper, String codigoBarras1, String codigoBarras2, float cantidad, String clave, String unidad, String recibido) {
         IdArticulo = idArticulo;
         IdPremovimientoAlmacen = idPremovimientoAlmacen;
         DescMayoreo = descMayoreo;
@@ -78,11 +78,11 @@ public class listaDetalles implements Serializable {
         CodigoBarras2 = codigoBarras2;
     }
 
-    public String getCantidad() {
+    public float getCantidad() {
         return Cantidad;
     }
 
-    public void setCantidad(String cantidad) {
+    public void setCantidad(float cantidad) {
         Cantidad = cantidad;
     }
 

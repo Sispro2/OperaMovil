@@ -5,6 +5,7 @@ import android.provider.BaseColumns;
 public class OperaMovilContract {
     private OperaMovilContract() {
     }
+
     public static class KSUCURSALES implements BaseColumns {
         public static final String Table = "KSUCURSALES";
         public static final String KS_CVESUC = "KS_CVESUC";
@@ -27,19 +28,27 @@ public class OperaMovilContract {
         public static final String CVESUCSINFONIA = "KS_CVESUCSINFONIA";
         public static final String IP_DEV = "KS_IP_DEV";
         public static final String PABASE_DEV = "KS_PABASE_DEV";
-        public static final String CVETRA="KS_CVETRA" ;
+        public static final String CVETRA = "KS_CVETRA";
         public static final String ANDRID = "KS_IMEI";
+        public static  final String ID_USUARIO = "KS_USUARIO";
     }
 
-    public static  class PREMOVIMIENTO_ALMACEN implements BaseColumns{
+    public static class PREMOVIMIENTO_ALMACEN implements BaseColumns {
         public static final String Table = "PREMOVIMIENTO_ALMACEN";
         public static final String ID_PREMOVIMIENTO_ALMACEN = "ID_PREMOVIMIENTO_ALMACEN";
         public static final String FOLIO = "FOLIO";
         public static final String OBSERVACIONES = "OBSERVACIONES";
         public static final String ID_SUCURSAL_ORIGEN = "ID_SUCURSAL_ORIGEN";
+        public static final String ID_SUCURSAL_DESTINO = "ID_SUCURSAL_DESTINO";
+        public static final String SUBTOTAL = "SUBTOTAL";
+        public static final String TOTAL_NETO = "TOTAL_NETO";
+        public static final String REFERENCIA = "REFERENCIA";
+        public static final String TOTAL_IVA = "TOTAL_IVA";
+        public static final String TOTAL_IEPS = "TOTAL_IEPS";
+       // public static final String COSTO_UNITARIO = "COSTO_UNITARIO";
     }
 
-    public static  class DETALLE_TRANSFERENCIA implements  BaseColumns{
+    public static class DETALLE_TRANSFERENCIA implements BaseColumns {
         public static final String Table = "DETALLE_TRANSFERENCIA";
         public static final String ID_ARTICULO = "ID_ARTICULO";
         public static final String ID_PREMOVIMIENTO_ALMACEN = "ID_PREMOVIMIENTO_ALMACEN";
@@ -51,10 +60,11 @@ public class OperaMovilContract {
         public static final String RECIBIDO = "RECIBIDO";
         public static final String CLAVE = "CLAVE";
         public static final String UNIDAD = "UNIDAD";
-        public static final String STATUS ="STATUS" ;
+        public static final String STATUS = "STATUS";
+        public static final String COSTO_UNITARIO = "COSTO_UNITARIO";
     }
 
-    public static class REZAGADOS implements BaseColumns{
+    public static class REZAGADOS implements BaseColumns {
         public static final String Table = "REZAGADOINI";
         public static final String RI_CVEART = "RI_CVEART";
         public static final String RI_NOMART = "RI_NOMART";
@@ -63,8 +73,8 @@ public class OperaMovilContract {
         public static final String RI_EXISTE = "RI_EXISTE";
         public static final String RI_URLWEB = "RI_URLWEB";
     }
-    public static class  ARTICULO implements  BaseColumns
-    {
+
+    public static class ARTICULO implements BaseColumns {
         public static final String Table = "ARTICULO";
         public static final String NA_CVEART = "NA_CVEART";
         public static final String NA_NOMART = "NA_NOMART";
@@ -73,8 +83,8 @@ public class OperaMovilContract {
         public static final String NA_LINNEG = "NA_LINNEG";
         public static final String NA_EXISTE = "NA_EXISTE";
     }
-    public static class  CONCURSO_VENTAS implements  BaseColumns
-    {
+
+    public static class CONCURSO_VENTAS implements BaseColumns {
         public static final String Table = "CONCURSO_VENTAS";
         public static final String CV_CONSEC = "CV_CONSEC";
         public static final String CV_TIPOCO = "CV_TIPOCO";

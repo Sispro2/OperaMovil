@@ -21,6 +21,7 @@ import com.abarrotescasavargas.operamovil.Main.FunGenerales.Variables;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -60,17 +61,35 @@ public class SucursalRepository {
             Log.e("SetSucursal", e.toString());
         }
     }
-    public  void SetUsuario(Context context, String CveTra, String IMEI){
+
+    public void SetUsuario(Context context, String CveTra, String IMEI) {
+        int _idUsuario = 0;
+        try {
+            ResultSet resultSet = BD_SQL.tabla("select id_usuario  from usuario where upper(clave) = upper('" + CveTra + "'); ", true, context);
+            if (resultSet != null) {
+                do {
+                    _idUsuario = resultSet.getInt(1);
+                } while (resultSet.next());
+                resultSet.close();
+            }
+        } catch (Exception e) {
+            Log.e("GetIdUsuario", e.toString());
+        }
+
+
+        // obterner el usuario
         dbHelper = new DbHelper(context);
         db = dbHelper.getWritableDatabase();
         try {
             String whereClause = "";
             String[] whereArgs = {};
-           // db.delete(OperaMovilContract.SUCURSAL.Table, whereClause, whereArgs);
+            // db.delete(OperaMovilContract.SUCURSAL.Table, whereClause, whereArgs);
             ContentValues configVal = new ContentValues();
             configVal.put(OperaMovilContract.SUCURSAL.CVETRA, CveTra);
             configVal.put(OperaMovilContract.SUCURSAL.ANDRID, IMEI);
-            long res = db.update(OperaMovilContract.SUCURSAL.Table,  configVal,whereClause,whereArgs );
+            configVal.put(OperaMovilContract.SUCURSAL.ID_USUARIO, _idUsuario);
+
+            long res = db.update(OperaMovilContract.SUCURSAL.Table, configVal, whereClause, whereArgs);
             db.close();
         } catch (Exception e) {
             db.close();
@@ -132,6 +151,7 @@ public class SucursalRepository {
                     "," + OperaMovilContract.SUCURSAL.IP_DEV +
                     "," + OperaMovilContract.SUCURSAL.CVETRA +
                     "," + OperaMovilContract.SUCURSAL.PABASE_DEV +
+                    "," + OperaMovilContract.SUCURSAL.ID_USUARIO +
                     " from " + OperaMovilContract.SUCURSAL.Table + ";";
 
             Cursor cursor = db.rawQuery(query, null);
@@ -150,6 +170,7 @@ public class SucursalRepository {
                         sucursal.setKS_PABASE(cursor.getString(cursor.getColumnIndexOrThrow("KS_PABASE")));
                     }
                     sucursal.setKS_CVEUSR(cursor.getString(cursor.getColumnIndexOrThrow(OperaMovilContract.SUCURSAL.CVETRA)));
+                    sucursal.setKS_IDUSUARIO(cursor.getInt(cursor.getColumnIndexOrThrow(OperaMovilContract.SUCURSAL.ID_USUARIO)));
                 }
                 cursor.close();
                 return sucursal;
@@ -160,6 +181,7 @@ public class SucursalRepository {
             return null;
         }
     }
+
     public interface LocationResultListener {
         void onLocationResult(double latitud, double longitud);
     }
@@ -193,23 +215,22 @@ public class SucursalRepository {
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             getUbicacion(context, (latitud, longitud) -> {
                 String latLon = latitud + "," + longitud;
-                insertarRegistroBitacora(usuario, modulo, latLon, androidId,accion);
+                insertarRegistroBitacora(usuario, modulo, latLon, androidId, accion);
             });
         } else {
             ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
         }
     }
 
-    private void insertarRegistroBitacora(String usuario, String modulo, String latLon, String androidId,String accion) {
+    private void insertarRegistroBitacora(String usuario, String modulo, String latLon, String androidId, String accion) {
         try {
             String query = "INSERT INTO BITACORAAPPS (BA_FECHAS, BA_USUARI, BA_MODULO, BA_LATLON, BA_TELEID,BA_ACCION) " +
-                    "VALUES (GETDATE(), '" + usuario + "', '" + modulo.toUpperCase() + "', '" + latLon + "', '" + androidId.toUpperCase() + "','"+accion.toUpperCase()+"');";
+                    "VALUES (GETDATE(), '" + usuario + "', '" + modulo.toUpperCase() + "', '" + latLon + "', '" + androidId.toUpperCase() + "','" + accion.toUpperCase() + "');";
             BD_SQL.ejecuta(query, context);
         } catch (Exception e) {
             //Excepcion
         }
     }
-
 
 
     public ArrayList<Sucursales> GetListaSucursales() {
