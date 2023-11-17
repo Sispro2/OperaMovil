@@ -128,10 +128,10 @@ public class SincronizandoActivity extends AppCompatActivity {
 
     private void CargaProveedores(String parametro1, String parametro2) {
         progressDialog.cancel();
-//        Intent intent = new Intent(getApplicationContext(), listaBitacora.class);
-//        intent.putExtra("Parametro1", parametro1);
-//        intent.putExtra("Parametro2", parametro2);
-//        startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), listaBitacora.class);
+        intent.putExtra("Parametro1", parametro1);
+        intent.putExtra("Parametro2", parametro2);
+        startActivity(intent);
         overridePendingTransition(R.transition.in_left, R.transition.out_left);
         sucursalRepository.insertLog("Proveedores","Entrada al modulo");
         finish();

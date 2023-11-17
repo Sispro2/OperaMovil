@@ -8,7 +8,7 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 4   ;
+    private static final int DATABASE_VERSION = 5   ;
     private static final String DATABASE_NOMBRE = "OperaMovil.db";
     Context context;
 
