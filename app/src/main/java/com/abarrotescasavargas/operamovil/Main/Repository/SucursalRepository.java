@@ -224,8 +224,8 @@ public class SucursalRepository {
 
     private void insertarRegistroBitacora(String usuario, String modulo, String latLon, String androidId, String accion) {
         try {
-            String query = "INSERT INTO BITACORAAPPS (BA_FECHAS, BA_USUARI, BA_MODULO, BA_LATLON, BA_TELEID,BA_ACCION) " +
-                    "VALUES (GETDATE(), '" + usuario + "', '" + modulo.toUpperCase() + "', '" + latLon + "', '" + androidId.toUpperCase() + "','" + accion.toUpperCase() + "');";
+            String query = "INSERT INTO BITACORAAPPS (BA_FECHAS, BA_USUARI, BA_MODULO, BA_LATLON, BA_TELEID,BA_ACCION,BA_ORIGEN) " +
+                    "VALUES (GETDATE(), '" + usuario + "', '" + modulo.toUpperCase() + "', '" + latLon + "', '" + androidId.toUpperCase() + "','" + accion.toUpperCase() + "','SINFONIA');";
             BD_SQL.ejecuta(query, context);
         } catch (Exception e) {
             //Excepcion
