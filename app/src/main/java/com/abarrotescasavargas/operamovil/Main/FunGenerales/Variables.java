@@ -8,7 +8,7 @@ public class Variables {
 
     public static String[] _MES = { "", "ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC" };
     public static Map<String,String> _DICCIONARIO_SUCURSAL =  new HashMap<String, String>();
-//    public  static String Ambiente= "PRODUCCION";
+   //public  static String Ambiente= "PRODUCCION";
     public  static String Ambiente= "DESARROLLO";
 
 }
