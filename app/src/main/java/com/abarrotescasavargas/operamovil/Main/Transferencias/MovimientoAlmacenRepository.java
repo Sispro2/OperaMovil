@@ -214,7 +214,7 @@ public class MovimientoAlmacenRepository {
                     ",DESC_SUPER" +
                     ",CODIGO_BARRAS1" +
                     ",CODIGO_BARRAS2" +
-                    ",ifnull(CANTIDAD,0) AS 'CANTIDAD' " +
+                    ",ifnull(RECIBIDO,0) AS 'CANTIDAD' " +
                     ",CLAVE" +
                     ",UNIDAD," +
                     " STATUS " +

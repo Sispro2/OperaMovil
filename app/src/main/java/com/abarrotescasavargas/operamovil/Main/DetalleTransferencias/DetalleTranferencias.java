@@ -60,9 +60,6 @@ public class DetalleTranferencias extends AppCompatActivity {
         events();
     }
 
-
-
-
     private void setup() {
         txtFolio = findViewById(R.id.txtFolio);
         txtOrigen = findViewById(R.id.txtvDescripcion);
@@ -94,7 +91,6 @@ public class DetalleTranferencias extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 return false;
             }
-
             @Override
             public boolean onQueryTextChange(String newText) {
                 filterList(newText);
@@ -247,7 +243,7 @@ public class DetalleTranferencias extends AppCompatActivity {
             new android.app.AlertDialog.Builder(this)
                     .setTitle("Advertencia")
                     .setMessage("Hay diferencia con la cantidad enviada")
-                    .setPositiveButton("aceptar", (dialog, which) -> {
+                    .setPositiveButton("si, continuar", (dialog, which) -> {
                         if (MovimientoAlmacenRepository.ActualizaStatus(item.getClave(), item.getIdPremovimientoAlmacen(), item.getIdArticulo(), this, recibido)) {
                             listTransferencias item2 = new listTransferencias( id_premovimiento_almacen,
                                     transferencia.getFolio()
