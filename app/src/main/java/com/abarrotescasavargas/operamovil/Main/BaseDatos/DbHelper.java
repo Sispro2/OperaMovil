@@ -47,7 +47,8 @@ public class DbHelper extends SQLiteOpenHelper {
             OperaMovilContract.PREMOVIMIENTO_ALMACEN.TOTAL_NETO + " FLOAT NOT NULL, " +
             OperaMovilContract.PREMOVIMIENTO_ALMACEN.REFERENCIA + " TEXT NOT NULL, " +
             OperaMovilContract.PREMOVIMIENTO_ALMACEN.TOTAL_IVA + " FLOAT NOT NULL, " +
-            OperaMovilContract.PREMOVIMIENTO_ALMACEN.TOTAL_IEPS + " FLOAT NOT NULL " +
+            OperaMovilContract.PREMOVIMIENTO_ALMACEN.TOTAL_IEPS + " FLOAT NOT NULL,  " +
+            OperaMovilContract.PREMOVIMIENTO_ALMACEN.FECHA_REGISTRO + " DATETIME NOT NULL  " +
             "); ";
 
     static String DETALLE_TRANSFERENCIA= "CREATE TABLE "+OperaMovilContract.DETALLE_TRANSFERENCIA.Table +"(" +
@@ -63,7 +64,8 @@ public class DbHelper extends SQLiteOpenHelper {
             OperaMovilContract.DETALLE_TRANSFERENCIA.CLAVE + " TEXT NOT NULL," +
             OperaMovilContract.DETALLE_TRANSFERENCIA.UNIDAD + " TEXT NOT NULL ," +
             OperaMovilContract.DETALLE_TRANSFERENCIA.STATUS + " INTEGER NOT NULL, " +
-            OperaMovilContract.DETALLE_TRANSFERENCIA.COSTO_UNITARIO + " FLOAT NOT NULL " +
+            OperaMovilContract.DETALLE_TRANSFERENCIA.COSTO_UNITARIO + " FLOAT NOT NULL, " +
+            OperaMovilContract.DETALLE_TRANSFERENCIA.ENVIADO + " INT DEFAULT 0 NOT NULL " +
             ");";
     static String ARTICULOS= "CREATE TABLE "+OperaMovilContract.ARTICULO.Table +"(" +
             OperaMovilContract.ARTICULO._ID + " INTEGER PRIMARY KEY AUTOINCREMENT ," +

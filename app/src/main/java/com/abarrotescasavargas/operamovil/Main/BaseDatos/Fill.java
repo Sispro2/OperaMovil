@@ -20,7 +20,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "NEZA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.1.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_NEZAMEX");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 1);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -30,7 +31,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "ECATEPEC");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.2.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_ECATEPEC");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 2);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -40,7 +42,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "CUAUTLA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.3.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_CUAUTLA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+           // contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 3);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -50,7 +53,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "CHALCO");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.5.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_CHALCO");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+           // contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 5);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -60,7 +64,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "TEXCOCO");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.6.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_TEXCOCO");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+           // contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 6);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -70,7 +75,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "HUIXTOCO");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.7.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_HUIXTOCO");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 6);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -80,7 +86,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "TLAHUAC");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.8.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_TLAHUAC");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA,8);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -90,7 +97,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "AYOTLA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.9.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_AYOTLA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "Widziek230620");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "Widziek230620");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 9);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -100,7 +108,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "GALEANA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.10.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_GALEANA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 10);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -110,7 +119,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "XALOSTOC");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.11.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_XALOSTOC");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+           // contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 11);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -120,7 +130,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "CHAPINGO2");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.12.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_CHAPINGO2");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 12);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -130,7 +141,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "SAN JOSE 2");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.13.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_SANJOSE2");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 13);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -140,7 +152,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "ZARAGOZA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.16.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_ZARAGOZA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+           // contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 16);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -150,7 +163,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "SAN JUAN");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.17.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_SANJUAN");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+           // contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 17);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -160,7 +174,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "PACHUCA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.18.100");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_PACHUCA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 18);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -170,7 +185,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "VIA MORELOS");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.19.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_VIAMORELOS");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 19);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -180,7 +196,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "PUEBLA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.21.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_PUEBLA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 21);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -190,7 +207,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "JUAREZ");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.22.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_JUAREZTEX");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 22);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -200,7 +218,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "CHOLULA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.23.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_CHOLULA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 23);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -210,7 +229,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "QUERETARO");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.24.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_QUERETARO");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 24);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -220,7 +240,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "SAN MARTIN");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.26.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_SANMARTIN");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "Widziek230620");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "Widziek230620");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 26);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -230,7 +251,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "APIZACO");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.27.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_APIZACO");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 27);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -240,7 +262,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "CAYETANO");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.28.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_CAYETANO");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 28);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -250,7 +273,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "TULYEHUALCO");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.29.100");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_TULYEHUALCO");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 29);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -260,7 +284,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "MIXQUIAHUALA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.31.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_MIXQUIAHUALA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 31);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -270,7 +295,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "HUICHAPAN");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.32.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_HUICHAPAN");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 32);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -280,7 +306,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "SANTA LUCIA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.34.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_SANTALUCIA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 34);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -290,7 +317,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "CALPULALPAN");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.35.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_CALPULALPAN");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 35);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -300,7 +328,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "ZUMPANGO");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.36.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_ZUMPANGO");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 36);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -310,7 +339,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "NATIVITAS");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.37.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_NATIVITAS");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 37);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -320,7 +350,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "JARDINES");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.38.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_JARDINES");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 38);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -330,7 +361,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "HUIXCOLOTLA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.40.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_HUIXCOLOTLA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 40);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -340,7 +372,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "SANTA FE");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.41.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_SANTAFE");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 41);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -350,7 +383,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "TLAPACOYA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.42.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_TLAPACOYA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 42);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -360,7 +394,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "ACTOPAN");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.43.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_ACTOPAN");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 43);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -370,7 +405,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "TULA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.44.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_TULA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 44);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -380,7 +416,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "TEPEJI-C");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.45.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_TEPEJIC");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 45);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -390,7 +427,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "SAN MATEO");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.46.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_SANMATEO");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 46);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -400,7 +438,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "AMEALCO");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.47.100");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_AMEALCO");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 47);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -410,7 +449,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "HUAMANTLA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.48.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_HUAMANTLA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 48);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -420,7 +460,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "TLAXCALA");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.49.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_TLAXCALA");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 49);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -430,7 +471,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "TECAMAC_2");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.50.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_TECAMAC2");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 50);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -440,7 +482,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "SAUCILLO_2");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.51.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_SAUCILLO2");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 51);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");
@@ -450,7 +493,8 @@ public class Fill {
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_NOMSUC, "AQUILES");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP, "192.168.52.1");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_BASEDT, "PV_AQUILES");
-            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
+            contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "LeAcGF");
+            //contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE, "82007Riwuap85");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA, 52);
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_IP_DEV, "192.168.1.14");
             contentValues.put(OperaMovilContract.KSUCURSALES.KS_PABASE_DEV, "wincaja");

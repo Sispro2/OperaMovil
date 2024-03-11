@@ -114,11 +114,9 @@ public class LoginActivity extends AppCompatActivity implements TareaMensajeInte
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == PERMISSIONS_REQUEST) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                // Permiso de ubicación concedido, ahora puedes obtener la ubicación.
                 LocationHelper.getDeviceLocation(this, new LocationHelper.OnLocationResultListener() {
                     @Override
                     public void onLocationResult(double latitude, double longitude) {
-                        // Imprimir la latitud y longitud en el LogCat
                         Log.v("LocationHelper----", "Latitud: " + latitude + ", Longitud: " + longitude);
                     }
                 });

@@ -50,10 +50,10 @@ public class activity_menu_2 extends AppCompatActivity {
     }
     private void events(){
         btnproveedor.setOnClickListener(v -> {
-//            Intent intent = new Intent(getApplicationContext(), SincronizandoActivity.class);
-//            intent.putExtra("origen","PROVEEDORES");
-//            startActivity(intent);
-//            overridePendingTransition(R.transition.in_left, R.transition.out_left);
+          //Intent intent = new Intent(getApplicationContext(), SincronizandoActivity.class);
+           // intent.putExtra("origen","BITACORA_PROVEEDORES");
+            //startActivity(intent);
+            //overridePendingTransition(R.transition.in_left, R.transition.out_left);
             creaPopUp();
         });
         btnreclutamiento.setOnClickListener(v -> {

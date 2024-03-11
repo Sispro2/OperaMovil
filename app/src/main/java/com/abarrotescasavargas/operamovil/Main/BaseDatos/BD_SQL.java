@@ -217,16 +217,10 @@ public class BD_SQL {
     }
     public static ResultSet tabla(String query, Boolean Leer, Context context) {
         try {
-            // Obtiene una conexión a la base de datos utilizando la función Con1()
             ResultSet tb = Objects.requireNonNull(Con1(context)).executeQuery(query);
-
-            // Si Leer es verdadero, avanza al primer registro del resultado (primer fila)
             if (Leer) tb.next();
-
-            // Retorna el ResultSet que contiene los resultados de la consulta
             return tb;
         } catch (SQLException e) {
-            // En caso de excepción SQL, retorna null (indicando un error)
             return null;
         }
     }

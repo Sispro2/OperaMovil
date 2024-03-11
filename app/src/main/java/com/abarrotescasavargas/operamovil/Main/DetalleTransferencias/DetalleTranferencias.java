@@ -130,7 +130,6 @@ public class DetalleTranferencias extends AppCompatActivity {
                                     .setTitle("Error")
                                     .setMessage("Algo Salio mal, intente nuevamente")
                                     .setPositiveButton("aceptar", (dialogs, whichs) -> {
-
                                     })
                                     .create().show();
                         }
@@ -141,7 +140,6 @@ public class DetalleTranferencias extends AppCompatActivity {
                                 context.getResources().getString(R.string.msj_servidor_local_no_responde, sucursalRepository.GetDetalleSucursal().getKS_IP()),
                                 Toast.LENGTH_LONG).show();
                     }
-
                 }).setNegativeButton("Cancelar", (dialog, which) -> dialog.dismiss())
                 .create().show();
     }
@@ -238,7 +236,6 @@ public class DetalleTranferencias extends AppCompatActivity {
     }
 
     private void ActualizaStatus(listaDetalles item, float recibido) {
-
         if (recibido > item.getCantidad() || recibido < item.getCantidad()) {
             new android.app.AlertDialog.Builder(this)
                     .setTitle("Advertencia")

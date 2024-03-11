@@ -13,6 +13,17 @@ public class PremovimientoAlmacen {
     private String REFERENCIA;
     private  float TOTAL_IVA;
     private float TOTAL_IEPS;
+    private String FECHA_REGISTRO;
+
+    public String getFECHA_REGISTRO() {
+        return FECHA_REGISTRO;
+    }
+
+    public void setFECHA_REGISTRO(String FECHA_REGISTRO) {
+        this.FECHA_REGISTRO = FECHA_REGISTRO;
+    }
+
+
 
 
     public int getID_SUCURSAL_DESTINO() {

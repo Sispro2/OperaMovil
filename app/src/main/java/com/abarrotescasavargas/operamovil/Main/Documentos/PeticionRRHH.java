@@ -21,6 +21,7 @@ public interface PeticionRRHH {
                     @Part("cve_suc") RequestBody cve_suc,
                     @Part("nombreCorto") RequestBody nombreCorto,
                     @Part MultipartBody.Part transporte
+
             );
 
     @GET("candidatoFoto.php")

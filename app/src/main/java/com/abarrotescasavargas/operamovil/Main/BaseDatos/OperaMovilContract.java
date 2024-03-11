@@ -45,6 +45,7 @@ public class OperaMovilContract {
         public static final String REFERENCIA = "REFERENCIA";
         public static final String TOTAL_IVA = "TOTAL_IVA";
         public static final String TOTAL_IEPS = "TOTAL_IEPS";
+        public  static final String FECHA_REGISTRO= "FECHA_REGISTRO";
        // public static final String COSTO_UNITARIO = "COSTO_UNITARIO";
     }
 
@@ -62,6 +63,7 @@ public class OperaMovilContract {
         public static final String UNIDAD = "UNIDAD";
         public static final String STATUS = "STATUS";
         public static final String COSTO_UNITARIO = "COSTO_UNITARIO";
+        public static final String ENVIADO = "ENVIADO";
     }
 
     public static class REZAGADOS implements BaseColumns {

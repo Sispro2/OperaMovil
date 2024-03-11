@@ -55,15 +55,6 @@ public class TransferenciasActivity extends AppCompatActivity {
                         _folio = cursor.getString(1);
                         _observaciones = cursor.getString(2).replace("\n", " ");
                         _sucOrigen= cursor.getString(3);
-
-                       /* _id_sucursal_origen = cursor.getInt(3);
-                        _id_sucursal_destino = cursor.getInt(4);
-                        _subtotal = cursor.getFloat(5);
-                        _total_neto = cursor.getFloat(6);
-                        _referencia= cursor.getString(7);
-                        _total_iva = cursor.getFloat(8);
-                        _total_ieps= cursor.getFloat(9);*/
-
                         elements.add(new listTransferencias( _id_premovimiento_almacen
                                 ,_folio
                                 ,_observaciones

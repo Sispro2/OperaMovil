@@ -34,7 +34,7 @@ public class MovimientoAlmacenRepository {
                         ",A.FOLIO" +
                         ",A.OBSERVACIONES " +
                         ",B.KS_NOMSUC " +
-                        "FROM PREMOVIMIENTO_ALMACEN A INNER JOIN KSUCURSALES B ON A.ID_SUCURSAL_ORIGEN= B.KS_CVESUC; ";
+                        "FROM PREMOVIMIENTO_ALMACEN A INNER JOIN KSUCURSALES B ON A.ID_SUCURSAL_ORIGEN= B.KS_CVESUC order by FECHA_REGISTRO desc; ";
                 return db.rawQuery(query, null);
             } catch (Exception e) {
                 Log.e("GetTransferenciasPendientes", e.toString());
@@ -57,9 +57,10 @@ public class MovimientoAlmacenRepository {
                     ",[total_neto]" +
                     ",[referencia]" +
                     ",[total_iva]" +
-                    ",[total_ieps] from " +
-                    "[premovimiento_almacen] where [estatus] = 0 and [id_movimiento_almacen_tipo] = '2' " +
+                    ",[total_ieps], [fecha_registro]  from " +
+                    "[premovimiento_almacen] where [estatus] = 0 and [id_movimiento_almacen_tipo] = '2'  and [fecha_registro]  between GETDATE()-70 and GETDATE() " +
                     "order by [id_premovimiento_almacen] desc;", true, context);
+            // agregar una valdación para que solo muestre las  de la semana o las de un día anterior 
             if (rs != null) {
                 dbHelper = new DbHelper(context);
                 db = dbHelper.getWritableDatabase();
@@ -78,6 +79,7 @@ public class MovimientoAlmacenRepository {
                     pma.setREFERENCIA(rs.getString(8));
                     pma.setTOTAL_IVA(rs.getFloat(9));
                     pma.setTOTAL_IEPS(rs.getFloat(10));
+                    pma.setFECHA_REGISTRO(rs.getTimestamp(11).toString());
                     bandera = SetPremovimientoAlmacen(pma, context);
                 } while (rs.next());
                 rs.close();
@@ -104,6 +106,7 @@ public class MovimientoAlmacenRepository {
             configVal.put(OperaMovilContract.PREMOVIMIENTO_ALMACEN.REFERENCIA, pma.getREFERENCIA());
             configVal.put(OperaMovilContract.PREMOVIMIENTO_ALMACEN.TOTAL_IVA, pma.getTOTAL_IVA());
             configVal.put(OperaMovilContract.PREMOVIMIENTO_ALMACEN.TOTAL_IEPS, pma.getTOTAL_IEPS());
+            configVal.put(OperaMovilContract.PREMOVIMIENTO_ALMACEN.FECHA_REGISTRO, pma.getFECHA_REGISTRO());
             long res = db.insertOrThrow(OperaMovilContract.PREMOVIMIENTO_ALMACEN.Table, null, configVal);
             db.close();
             return res > 0;
@@ -317,7 +320,6 @@ public class MovimientoAlmacenRepository {
                         ", '" + _totalIva + "'" +
                         ", '" + _totalIeps + "'" +
                         ", '" + _referencia + "' ;", true, context);
-
                 if (resultSet != null) {
                     do {
                         idMovimientoAlmacen = resultSet.getInt(1);
