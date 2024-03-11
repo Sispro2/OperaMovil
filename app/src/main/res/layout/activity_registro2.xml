@@ -6,8 +6,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/acvwhite"
-    tools:context="com.abarrotescasavargas.operamovil.Main.Registro2">
+    android:background="@color/acvwhite">
 
     <Button
         android:id="@+id/btncamaraSello"

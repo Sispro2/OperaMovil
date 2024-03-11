@@ -112,8 +112,8 @@ public class menuAplicaciones extends AppCompatActivity {
         btnreclutamiento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(),Reclutamiento.class);
-                startActivityForResult(intent, 0);
+                //Intent intent = new Intent (v.getContext(),Reclutamiento.class);
+                //startActivityForResult(intent, 0);
                 overridePendingTransition(R.transition.in_left, R.transition.out_left);
             }
         });
