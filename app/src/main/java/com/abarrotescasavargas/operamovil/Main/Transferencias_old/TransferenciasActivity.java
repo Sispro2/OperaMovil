@@ -1,4 +1,4 @@
-package com.abarrotescasavargas.operamovil.Main.Transferencias;
+package com.abarrotescasavargas.operamovil.Main.Transferencias_old;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.abarrotescasavargas.operamovil.Main.DetalleTransferencias.DetalleTranferencias;
+import com.abarrotescasavargas.operamovil.Main.Transferencias.Detalle.TransferenciasDetalleActivity;
 import com.abarrotescasavargas.operamovil.R;
 
 import java.util.ArrayList;
@@ -73,7 +74,8 @@ public class TransferenciasActivity extends AppCompatActivity {
 
     private void moveToDescription(listTransferencias item) {
         //Intent intent = new Intent(this, DetalleTransferencia.class);
-        Intent intent = new Intent(this, DetalleTranferencias.class);
+        //Intent intent = new Intent(this, DetalleTranferencias.class);
+        Intent intent = new Intent(this, TransferenciasDetalleActivity.class);
         intent.putExtra("DetalleTransferencia", item);
         startActivity(intent);
     }

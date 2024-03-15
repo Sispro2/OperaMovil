@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.abarrotescasavargas.operamovil.Main.Mantenimiento.ActivityMantenimiento;
-import com.abarrotescasavargas.operamovil.Main.Transferencias.TransferenciasActivity;
+import com.abarrotescasavargas.operamovil.Main.Transferencias_old.TransferenciasActivity;
 import com.abarrotescasavargas.operamovil.R;
 
 

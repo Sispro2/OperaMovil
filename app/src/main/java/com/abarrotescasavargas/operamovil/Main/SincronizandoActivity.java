@@ -31,7 +31,7 @@ import com.abarrotescasavargas.operamovil.Main.Mantenimiento.ReporteMantenimient
 import com.abarrotescasavargas.operamovil.Main.Mantenimiento.ResponseReporteMantto;
 import com.abarrotescasavargas.operamovil.Main.Mantenimiento.RetrofitMantto;
 import com.abarrotescasavargas.operamovil.Main.Repository.SucursalRepository;
-import com.abarrotescasavargas.operamovil.Main.Transferencias.TransferenciasActivity;
+import com.abarrotescasavargas.operamovil.Main.Transferencias_old.TransferenciasActivity;
 import com.abarrotescasavargas.operamovil.Main.Verificador.ActivityVerificador;
 import com.abarrotescasavargas.operamovil.Main.Verificador.VerificadorRepository;
 import com.abarrotescasavargas.operamovil.R;

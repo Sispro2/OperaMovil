@@ -1,4 +1,4 @@
-package com.abarrotescasavargas.operamovil.Main.Transferencias;
+package com.abarrotescasavargas.operamovil.Main.Transferencias_old;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -217,7 +217,7 @@ public class MovimientoAlmacenRepository {
                     ",DESC_SUPER" +
                     ",CODIGO_BARRAS1" +
                     ",CODIGO_BARRAS2" +
-                    ",ifnull(RECIBIDO,0) AS 'CANTIDAD' " +
+                    ",ifnull(CANTIDAD,0) AS 'CANTIDAD' " +
                     ",CLAVE" +
                     ",UNIDAD," +
                     " STATUS " +
@@ -244,7 +244,6 @@ public class MovimientoAlmacenRepository {
     }
 
     public static boolean SetMovimientoAlmacen(String Folio) {
-
         db = dbHelper.getReadableDatabase();
         int idMovimientoAlmacen = 0;
         String folioPremovimientoAlmacen = "";
@@ -296,18 +295,6 @@ public class MovimientoAlmacenRepository {
         if (_idPremovimientoAlmacen > 0) {
             try {
                 SucursalRepository sucursalRepository = new SucursalRepository(context);
-//                String aux= "EXEC [dbo].[spGuardarMovAlmApp ] " +
-//                        "2" +
-//                        ",2" +
-//                        ",'" + _observaciones + "'" +
-//                        ", '" + _subtotal + "'" +
-//                        ", '" + _totalNeto + "'" +
-//                        "," + sucursalRepository.GetDetalleSucursal().getKS_IDUSUARIO() +
-//                        ", '" + _sucursalOrigen + "'" +
-//                        ", '" + _sucursalDestino + "'" +
-//                        ", '" + _totalIva + "'" +
-//                        ", '" + _totalIeps + "'" +
-//                        ", '" + _referencia + "' ;";
                 ResultSet resultSet = BD_SQL.tabla("EXEC [dbo].[spGuardarMovAlmApp ] " +
                         "2" +
                         ",2" +
@@ -336,47 +323,55 @@ public class MovimientoAlmacenRepository {
     }
 
     private static boolean GuardaMovimientoAlmacen(int idPremovimientoAlmacen, boolean Continua, int idMovimientoAlmacen) {
-
         boolean bandera = false;
         Cursor cursor;
         String query = "";
-        // Inserta el detalle
         try {
             db = dbHelper.getReadableDatabase();
-            String _clave = "";
-            float _recibido = 0;
-            float _costoUnitario = 0;
-            String _unidad = "";
             if (Continua) {
-                query = " SELECT CLAVE, RECIBIDO, COSTO_UNITARIO, UNIDAD from DETALLE_TRANSFERENCIA  where ID_PREMOVIMIENTO_ALMACEN = '" + idPremovimientoAlmacen + "'; ";
+                query = "SELECT CLAVE, RECIBIDO, COSTO_UNITARIO, UNIDAD FROM DETALLE_TRANSFERENCIA WHERE ID_PREMOVIMIENTO_ALMACEN = '" + idPremovimientoAlmacen + "';";
                 cursor = db.rawQuery(query, null);
-                if (cursor != null) {
-                    if (cursor.getCount() > 0) {
-                        cursor.moveToFirst();
-                        while (!cursor.isAfterLast()) {
-                            _clave = cursor.getString(0);
-                            _recibido = cursor.getFloat(1);
-                            _costoUnitario = cursor.getFloat(2);
-                            _unidad = cursor.getString(3);
-                            String aux = "EXEC [dbo].[spGuardarMADAplicacion  ] '" + idMovimientoAlmacen + "' ,'" + _clave + "', '" + _recibido + "', '" + _costoUnitario + "', '" + _unidad + "' ; ";
-                            ResultSet resultSet = BD_SQL.tabla("EXEC [dbo].[spGuardarMADAplicacion] '" + idMovimientoAlmacen + "' ,'" + _clave + "', '" + _recibido + "', '" + _costoUnitario + "', '" + _unidad + "' ; ", true, context);
-                            if (resultSet != null) {
-                                resultSet.close();
-                                bandera = true;
-                            }
-                            cursor.moveToNext();
-                        }
+                if (cursor != null && cursor.getCount() > 0) {
+                    StringBuilder insertStatement = new StringBuilder();
+                    insertStatement.append("BEGIN TRANSACTION; ");
+                    while (cursor.moveToNext()) {
+                        String clave = cursor.getString(0);
+                        float recibido = cursor.getFloat(1);
+                        float costoUnitario = cursor.getFloat(2);
+                        String unidad = cursor.getString(3);
+                        insertStatement.append("EXEC [dbo].[spGuardarMADAplicacion] '")
+                                .append(idMovimientoAlmacen)
+                                .append("', '")
+                                .append(clave)
+                                .append("', '")
+                                .append(recibido)
+                                .append("', '")
+                                .append(costoUnitario)
+                                .append("', '")
+                                .append(unidad)
+                                .append("'; ");
                     }
+                    insertStatement.append("COMMIT;");
+                    String combinedQuery = insertStatement.toString();
                     cursor.close();
+                    ResultSet resultSet = BD_SQL.tabla(combinedQuery, true, context);
+                    if (resultSet != null) {
+                        resultSet.close();
+                        bandera = true;
+                    } else {
+                        // Si algo sale mal, realiza un rollback
+                        db.execSQL("ROLLBACK;");
+                    }
                 }
-                BorraPremovimientoAlmacenSqlLite(idPremovimientoAlmacen);
             }
-
         } catch (Exception e) {
-            Log.e("SetMovimientoAlmacen", e.toString());
+            Log.e("GuardaMovimientoAlmacen", e.toString());
+            // Si algo sale mal, realiza un rollback
+            db.execSQL("ROLLBACK;");
         }
         return bandera;
     }
+
 
     private static void BorraPremovimientoAlmacenSqlLite(int idPremovimientoAlmacen) {
         dbHelper = new DbHelper(context);

@@ -23,12 +23,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.abarrotescasavargas.operamovil.Main.FunGenerales.Funciones;
-import com.abarrotescasavargas.operamovil.Main.Login.LoginActivity;
 import com.abarrotescasavargas.operamovil.Main.Repository.SucursalRepository;
-import com.abarrotescasavargas.operamovil.Main.Transferencias.TransferenciasActivity;
+import com.abarrotescasavargas.operamovil.Main.Transferencias_old.TransferenciasActivity;
 import com.abarrotescasavargas.operamovil.R;
-import com.abarrotescasavargas.operamovil.Main.Transferencias.MovimientoAlmacenRepository;
-import com.abarrotescasavargas.operamovil.Main.Transferencias.listTransferencias;
+import com.abarrotescasavargas.operamovil.Main.Transferencias_old.MovimientoAlmacenRepository;
+import com.abarrotescasavargas.operamovil.Main.Transferencias_old.listTransferencias;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,7 +74,10 @@ public class DetalleTranferencias extends AppCompatActivity {
        // FolioSinText= transferencia.getFolio();
         txtOrigen.setText(getString(R.string.T_sucursal_origen, transferencia.getSucOrigen()));
 
-        Funciones.setTextWithMarquee(txtObservaciones, transferencia.getObservaciones());
+        //Funciones.setTextWithMarquee(txtObservaciones, transferencia.getObservaciones());
+        String observaciones = transferencia.getObservaciones() != null  || transferencia.getObservaciones() != "" ? transferencia.getObservaciones() : " ";
+        Funciones.setTextWithMarquee(txtObservaciones, observaciones);
+
         id_premovimiento_almacen = transferencia.getId_premovimiento_almacen();
         recyclerView = findViewById(R.id.reciclerDetalle);
         recyclerView.setHasFixedSize(true);

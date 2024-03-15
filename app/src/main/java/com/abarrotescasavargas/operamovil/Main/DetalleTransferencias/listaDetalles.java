@@ -109,4 +109,5 @@ public class listaDetalles implements Serializable {
     public void setStatus(String status) {
         Status = status;
     }
+
 }

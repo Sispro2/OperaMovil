@@ -44,7 +44,7 @@
             android:name=".Main.Candidatos.ActivityCandidatos"
             android:exported="false" />
         <activity
-            android:name=".Main.Transferencias.TransferenciasActivity"
+            android:name=".Main.Transferencias_old.TransferenciasActivity"
             android:exported="false" />
 
         <activity
@@ -81,6 +81,10 @@
             android:theme="@style/AppTheme"/>
         <activity
             android:name=".Main.Verificador.ActivityVerificador"
+            android:label="Articulo Nuevo"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Main.Transferencias.Detalle.TransferenciasDetalleActivity"
             android:label="Articulo Nuevo"
             android:theme="@style/AppTheme"/>
         <activity

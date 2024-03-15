@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back_img2"
-    tools:context=".Main.Transferencias.TransferenciasActivity">
+    tools:context=".Main.Transferencias_old.TransferenciasActivity">
 
     <TextView
         android:id="@+id/txt_elije"
