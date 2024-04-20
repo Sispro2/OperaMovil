@@ -8,7 +8,7 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 5   ;
+    private static final int DATABASE_VERSION = 6   ;
     private static final String DATABASE_NOMBRE = "OperaMovil.db";
     Context context;
 
@@ -35,6 +35,15 @@ public class DbHelper extends SQLiteOpenHelper {
             OperaMovilContract.KSUCURSALES.KS_CVESUCSINFONIA + " INTEGER NOT NULL," +
             OperaMovilContract.KSUCURSALES.KS_IP_DEV + " TEXT NOT NULL," +
             OperaMovilContract.KSUCURSALES.KS_PABASE_DEV + " TEXT NOT NULL); ";
+
+    static String Transferencias = "CREATE TABLE " + OperaMovilContract.TRANSFERENCIAS.Table + " (" +
+            OperaMovilContract.TRANSFERENCIAS._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            OperaMovilContract.TRANSFERENCIAS.TR_CVEART + " TEXT NOT NULL," +
+            OperaMovilContract.TRANSFERENCIAS.TR_DESCIP + " TEXT NOT NULL," +
+            OperaMovilContract.TRANSFERENCIAS.TR_CAREAL + " TEXT NOT NULL," +
+            OperaMovilContract.TRANSFERENCIAS.TR_CONTEO + " TEXT NOT NULL," +
+            OperaMovilContract.TRANSFERENCIAS.TR_IDTRAN + " TEXT NOT NULL); ";
+
 
     static String PREMOVIMIENTO_ALMACEN= "CREATE TABLE "+OperaMovilContract.PREMOVIMIENTO_ALMACEN.Table +"(" +
             OperaMovilContract.PREMOVIMIENTO_ALMACEN._ID + " INTEGER PRIMARY KEY AUTOINCREMENT ," +
@@ -85,6 +94,8 @@ public class DbHelper extends SQLiteOpenHelper {
             OperaMovilContract.REZAGADOS.RI_NOMART + " TEXT NOT NULL," +
             OperaMovilContract.REZAGADOS.RI_URLWEB + " TEXT  ); ";
 
+
+
     static String CONCURSO_VENTAS = "CREATE TABLE " + OperaMovilContract.CONCURSO_VENTAS.Table + "(" +
             OperaMovilContract.CONCURSO_VENTAS._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
             OperaMovilContract.CONCURSO_VENTAS.CV_CONSEC + " TEXT," +
@@ -115,6 +126,7 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(REZAGADOINI);
         db.execSQL(ARTICULOS);
         db.execSQL(CONCURSO_VENTAS);
+        db.execSQL(Transferencias);
         Fill fill = new Fill(db, context);
         fill.OnCreate();
     }
@@ -123,6 +135,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.w(DbHelper.class.getName(), "Upgrading database from version " + oldVersion + " to " + newVersion + ", which will destroy all old data");
         db.execSQL("DROP TABLE IF EXISTS " + OperaMovilContract.ARTICULO.Table);
+        db.execSQL("DROP TABLE IF EXISTS " + OperaMovilContract.TRANSFERENCIAS.Table);
         db.execSQL("DROP TABLE IF EXISTS " + OperaMovilContract.SUCURSAL.Table);
         db.execSQL("DROP TABLE IF EXISTS " + OperaMovilContract.KSUCURSALES.Table);
         db.execSQL("DROP TABLE IF EXISTS " + OperaMovilContract.PREMOVIMIENTO_ALMACEN.Table);

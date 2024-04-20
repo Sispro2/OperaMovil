@@ -44,7 +44,6 @@ public class TransferenciasActivity extends AppCompatActivity {
         String _folio = ""; String _observaciones = ""; String _referencia = "";
         String _sucOrigen= "";
 
-
         elements = new ArrayList<>();
         Cursor cursor = MovimientoAlmacenRepository.GetSetTransferenciasPendientes(getApplicationContext());
         try {

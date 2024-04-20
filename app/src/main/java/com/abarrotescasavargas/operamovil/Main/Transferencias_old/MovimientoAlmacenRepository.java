@@ -26,7 +26,7 @@ public class MovimientoAlmacenRepository {
         dbHelper = new DbHelper(context);
     }
 
-    public static Cursor GetSetTransferenciasPendientes(Context context) {
+    public static Cursor  GetSetTransferenciasPendientes(Context context) {
         if (GetTransferenciasPendientesSql(context)) {
             try {
                 db = dbHelper.getReadableDatabase();

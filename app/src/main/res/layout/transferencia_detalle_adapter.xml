@@ -6,16 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:animateLayoutChanges="true"
-    android:layout_margin="5dp"
+    android:layout_margin="1dp"
+
     app:cardCornerRadius="40dp"
-    app:cardElevation="4dp"
+    app:cardElevation="2dp"
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
+        android:id="@+id/fondo"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
             android:id="@+id/linearLayout"
+
             android:layout_width="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
@@ -47,7 +50,7 @@
             <TextView
                 android:id="@+id/cantidad"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="20dp"
                 android:text="cantidad"
                 android:visibility="invisible"
                 android:gravity="center"
@@ -57,16 +60,31 @@
                 android:singleLine="true"
                 android:ellipsize="end" />
 
-            <EditText
-                android:id="@+id/conteo"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Cantidad"
-                android:gravity="center"
-                android:inputType="number"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_below="@id/txtCantidad" />
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/conteo"
+                    android:layout_width="210dp"
+                    android:layout_marginStart="30dp"
+
+                    android:layout_height="wrap_content"
+                    android:hint="Cantidad"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/unidad"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:hint=""
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:layout_weight="1"/>
+            </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

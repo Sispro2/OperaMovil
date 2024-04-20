@@ -75,6 +75,15 @@ public class OperaMovilContract {
         public static final String RI_EXISTE = "RI_EXISTE";
         public static final String RI_URLWEB = "RI_URLWEB";
     }
+    public static class TRANSFERENCIAS implements BaseColumns {
+        public static final String Table = "TRANSFERENCIAS";
+        public static final String TR_CVEART = "TR_CVEART";
+        public static final String TR_DESCIP = "TR_DESCIP";
+        public static final String TR_CAREAL = "TR_CAREAL";
+        public static final String TR_CONTEO = "TR_CONTEO";
+        public static final String TR_IDTRAN = "TR_IDTRAN";
+
+    }
 
     public static class ARTICULO implements BaseColumns {
         public static final String Table = "ARTICULO";

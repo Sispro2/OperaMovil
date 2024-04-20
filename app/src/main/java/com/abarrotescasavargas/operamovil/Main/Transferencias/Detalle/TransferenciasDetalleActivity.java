@@ -1,10 +1,12 @@
 package com.abarrotescasavargas.operamovil.Main.Transferencias.Detalle;
 
 import android.app.ProgressDialog;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
@@ -12,6 +14,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
@@ -27,10 +30,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.abarrotescasavargas.operamovil.Main.BaseDatos.DbHelper;
+import com.abarrotescasavargas.operamovil.Main.BaseDatos.OperaMovilContract;
 import com.abarrotescasavargas.operamovil.Main.DetalleTransferencias.DetalleTranferencias;
 import com.abarrotescasavargas.operamovil.Main.DetalleTransferencias.ListMovAlmDetalleAdapter;
 import com.abarrotescasavargas.operamovil.Main.DetalleTransferencias.listaDetalles;
 import com.abarrotescasavargas.operamovil.Main.FunGenerales.Funciones;
+import com.abarrotescasavargas.operamovil.Main.Menu2.DBRezagado;
 import com.abarrotescasavargas.operamovil.Main.Repository.SucursalRepository;
 import com.abarrotescasavargas.operamovil.Main.Transferencias_old.MovimientoAlmacenRepository;
 import com.abarrotescasavargas.operamovil.Main.Transferencias_old.TransferenciasActivity;
@@ -53,6 +59,8 @@ public class TransferenciasDetalleActivity extends AppCompatActivity {
     Button button;
     SucursalRepository sucursalRepository;
     private Context context;
+    private static DbHelper dbHelper;
+    private static SQLiteDatabase db;
 
     private ProgressDialog progressDialog;
     @Override
@@ -127,6 +135,7 @@ public class TransferenciasDetalleActivity extends AppCompatActivity {
             }
         });
     }
+
     private void traeDetalleTransferencia() {
         movimientoAlmacenRepository = new MovimientoAlmacenRepository(this);
         Cursor cursor = movimientoAlmacenRepository.GetDetalleTransferencia(id_premovimiento_almacen);
@@ -159,9 +168,12 @@ public class TransferenciasDetalleActivity extends AppCompatActivity {
         detalleTransferenciaList.clear();
         for (listaDetalles detalle : elements) {
             String clave = detalle.getClave();
+            String unidad = detalle.getUnidad();
             String descripcion = detalle.getDescMayoreo();
             float cantidad = detalle.getCantidad();
-            OBJTransferenciaDetalleAdapter detalleAdapter = new OBJTransferenciaDetalleAdapter(clave, descripcion,cantidad,false);
+            OBJTransferenciaDetalleAdapter detalleAdapter = new OBJTransferenciaDetalleAdapter(clave, descripcion,cantidad,false,unidad,id_premovimiento_almacen);
+            insertaTransfer(context,detalle.getCantidad(),"0",clave,descripcion,id_premovimiento_almacen);
+
             detalleTransferenciaList.add(detalleAdapter);
         }
         contador.setText(String.valueOf("No. de registros: "+cardAdapter.getItemCount()));
@@ -194,6 +206,26 @@ public class TransferenciasDetalleActivity extends AppCompatActivity {
                 });
         AlertDialog alert = builder.create();
         alert.show();
+    }
+    private static boolean insertaTransfer( Context context,float CaReal, String CaConteo, String CveArt, String Descripcion,int idTrans)
+    {
+        dbHelper = new DbHelper(context);
+        db = dbHelper.getWritableDatabase();
+        try {
+            ContentValues configVal = new ContentValues();
+            configVal.put(OperaMovilContract.TRANSFERENCIAS.TR_CAREAL, CaReal);
+            configVal.put(OperaMovilContract.TRANSFERENCIAS.TR_CONTEO, CaConteo);
+            configVal.put(OperaMovilContract.TRANSFERENCIAS.TR_CVEART, CveArt);
+            configVal.put(OperaMovilContract.TRANSFERENCIAS.TR_DESCIP, Descripcion);
+            configVal.put(OperaMovilContract.TRANSFERENCIAS.TR_IDTRAN, idTrans);
+            long res = db.insertOrThrow(OperaMovilContract.TRANSFERENCIAS.Table, null, configVal);
+            db.close();
+            return res > 0;
+        } catch (Exception e) {
+            db.close();
+            Log.e("SetMovimientoAlmacenDetalle", e.toString());
+            return false;
+        }
     }
 
     private void recargarRecyclerViewConColores() {
@@ -279,16 +311,20 @@ public class TransferenciasDetalleActivity extends AppCompatActivity {
 //    }
 
     private void enviarRegistrosConDiferencias(List<String> registrosConDiferencias) {
-        new EnviarRegistrosTask().execute(registrosConDiferencias);
+        new EnviarRegistrosTask(context).execute(registrosConDiferencias);
     }
 
     private class EnviarRegistrosTask extends AsyncTask<List<String>, Void, Boolean> {
         private ProgressDialog progressDialog;
+        private Context mContext;
 
+        public EnviarRegistrosTask(Context context) {
+            mContext = context;
+        }
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progressDialog = new ProgressDialog(TransferenciasDetalleActivity.this);
+            progressDialog = new ProgressDialog(mContext);
             progressDialog.setMessage("Enviando registros...");
             progressDialog.setCancelable(false);
             progressDialog.show();

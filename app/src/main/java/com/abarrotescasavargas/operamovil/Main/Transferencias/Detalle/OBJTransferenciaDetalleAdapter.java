@@ -6,13 +6,34 @@ public class OBJTransferenciaDetalleAdapter {
     private int conteo;
     private float cantidad;
     private boolean diferencias;
+    private String unidad;
 
-    public OBJTransferenciaDetalleAdapter(String clave, String descripcion,float cantidad,boolean diferencias) {
+    private int cveTrans;
+    public OBJTransferenciaDetalleAdapter(String clave, String descripcion,float cantidad,boolean diferencias, String unidad,int cveTrans) {
         this.clave = clave;
         this.diferencias =  false;
         this.descripcion = descripcion;
         this.cantidad= cantidad;
+        this.unidad =  unidad;
+        this.cveTrans = cveTrans;
     }
+
+    public int getCveTrans() {
+        return cveTrans;
+    }
+
+    public void setCveTrans(int cveTrans) {
+        this.cveTrans = cveTrans;
+    }
+
+    public String getUnidad() {
+        return unidad;
+    }
+
+    public void setUnidad(String unidad) {
+        this.unidad = unidad;
+    }
+
     public String getClave() {
         return clave;
     }
@@ -42,8 +63,9 @@ public class OBJTransferenciaDetalleAdapter {
         this.cantidad = cantidad;
     }
     public boolean tieneDiferencias() {
-        return diferencias;
+        return getCantidad() != getConteo();
     }
+
 
     public void setDiferencias(boolean diferencias) {
         this.diferencias = diferencias;
