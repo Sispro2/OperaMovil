@@ -176,9 +176,7 @@ public class RezagadoAdapter extends RecyclerView.Adapter<RezagadoAdapter.ViewHo
             setTextWithMarquee(RI_FECDAT, expresionesRegulares(item.getRI_FECDAT()));
             setTextWithMarquee(RI_EXISTE, "Existencia inicial: " + item.getRI_EXISTE() +"| Existencia actual: "+ BD_SQL.ObtenerExistenciaTotalClave(item.getRI_CVEART()));
             setTextWithMarquee(RI_DIASREZ, "Días en existencia: " + item.getRI_DIASVT());
-            //Validar que el campo exista en la tabla
 
-            //Valida que la URL sea valida
 
             if (!TextUtils.isEmpty(item.getRI_URLWEB())) {
                 try {
@@ -198,10 +196,6 @@ public class RezagadoAdapter extends RecyclerView.Adapter<RezagadoAdapter.ViewHo
                 imvDocumento.setImageResource(R.drawable.without_image_foreground);
                 Log.v("Data null", item.getRI_CVEART());
             }
-
-
-
-
             itemView.setOnClickListener(v -> listener.onItemClick(item));
         }
 
